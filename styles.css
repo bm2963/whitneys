@@ -20,10 +20,25 @@
   html, body{ margin:0; padding:0; }
   body{
     font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-    background: var(--black);
     color: var(--ink);
     line-height: 1.5;
+    margin: 0;
+  
+    /* STRONG teal → black transition */
+    background: linear-gradient(
+      to bottom,
+      #19c1c3 0%,
+      #12aeb0 15%,
+      #0b7f82 30%,
+      #06484a 45%,
+      #031f20 60%,
+      #070707 80%,
+      #070707 100%
+    );
+  
+    background-attachment: fixed;
   }
+  
   
   a{ color: inherit; text-decoration: none; }
   
