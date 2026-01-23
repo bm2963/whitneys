@@ -128,6 +128,12 @@
     border: 1px solid transparent;
   }
   .nav-cta:hover{ background: var(--teal-dark); }
+  /* Hide Book Now button on Team page without shifting nav */
+.page-team .nav-cta{
+    visibility: hidden;   /* keeps space so nav doesn't shift */
+    pointer-events: none;
+  }
+  
   
   /* Buttons */
   .btn{
