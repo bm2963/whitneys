@@ -565,4 +565,165 @@
       grid-template-columns: 1fr;
     }
   }
+  /* Contact Us (single section) */
+.contact-header{
+    text-align: center;
+    margin-bottom: 18px;
+  }
+  
+  .contact-header h2{
+    margin: 0;
+    font-size: 2.1rem;
+  }
+  
+  /* Faded teal underline */
+  .teal-underline{
+    width: min(520px, 88%);
+    height: 4px;
+    margin: 12px auto 0;
+    border-radius: 999px;
+    background: linear-gradient(
+      90deg,
+      rgba(25,193,195,0) 0%,
+      rgba(25,193,195,0.95) 35%,
+      rgba(25,193,195,0.95) 65%,
+      rgba(25,193,195,0) 100%
+    );
+    box-shadow: 0 0 22px rgba(25,193,195,0.25);
+  }
+  
+  /* Panel that matches your reference image layout */
+  .contact-panel{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+  
+    background: #0f0f0f;
+    border-radius: 26px;
+    padding: 26px;
+  
+    border: 1px solid rgba(255,255,255,0.10);
+    box-shadow: var(--shadow);
+  }
+  
+  /* Soft divider line between columns (desktop only) */
+  .contact-col{
+    padding: 8px 10px;
+  }
+  .contact-col:first-child{
+    border-right: 1px solid rgba(255,255,255,0.10);
+  }
+  
+  .contact-title{
+    margin: 0 0 12px;
+    color: var(--teal);
+    font-size: 2.0rem;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: rgba(25,193,195,0.55);
+    text-underline-offset: 6px;
+  }
+  
+  /* Location */
+  .contact-address{
+    text-align: center;
+    font-weight: 900;
+    font-size: 1.35rem;
+    margin: 0 0 14px;
+    color: rgba(255,255,255,0.95);
+  }
+  
+  .contact-phone{
+    display: block;
+    text-align: center;
+    font-weight: 950;
+    font-size: 2.05rem;
+    color: rgba(25,193,195,0.95);
+    text-decoration: underline;
+    text-decoration-color: rgba(25,193,195,0.55);
+    text-underline-offset: 6px;
+    margin-bottom: 10px;
+  }
+  .contact-phone:hover{
+    color: var(--teal);
+  }
+  
+  /* Hours */
+  .contact-hours-note{
+    text-align: center;
+    margin: 0 0 14px;
+    color: rgba(255,255,255,0.9);
+    font-weight: 800;
+    font-size: 1.05rem;
+  }
+  .contact-hours-note span{
+    color: rgba(255,255,255,0.78);
+    font-weight: 750;
+  }
+  
+  .hours-table{
+    list-style: none;
+    padding: 0;
+    margin: 0 auto 12px;
+    max-width: 360px;
+  }
+  
+  .hours-table li{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 14px;
+    align-items: baseline;
+    padding: 6px 0;
+  }
+  
+  .hours-table .day{
+    color: rgba(25,193,195,0.95);
+    font-weight: 950;
+    font-size: 1.55rem;
+    text-align: left;
+  }
+  
+  .hours-table .time{
+    color: rgba(25,193,195,0.95);
+    font-weight: 950;
+    font-size: 1.55rem;
+    text-align: right;
+    text-decoration: underline;
+    text-decoration-color: rgba(25,193,195,0.55);
+    text-underline-offset: 6px;
+  }
+  
+  .contact-note{
+    text-align: center;
+    margin: 10px 0 0;
+    color: rgba(255,255,255,0.78);
+    font-weight: 700;
+  }
+  
+  /* Responsive */
+  @media (max-width: 900px){
+    .contact-panel{
+      grid-template-columns: 1fr;
+      padding: 20px;
+    }
+    .contact-col:first-child{
+      border-right: none;
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+      padding-bottom: 18px;
+      margin-bottom: 6px;
+    }
+    .contact-title{
+      font-size: 1.75rem;
+    }
+    .contact-address{
+      font-size: 1.15rem;
+    }
+    .contact-phone{
+      font-size: 1.7rem;
+    }
+    .hours-table .day,
+    .hours-table .time{
+      font-size: 1.25rem;
+    }
+  }
   
