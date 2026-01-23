@@ -729,7 +729,7 @@
 .services-stack{
     display: flex;
     flex-direction: column;
-    gap: 42px;
+    gap: 28px;
     margin-top: 36px;
   }
   
@@ -757,9 +757,9 @@
   .image-placeholder{
     width: 100%;
     max-width: 420px;
-    height: 260px;
+    height: 200px;
   
-    border-radius: 26px;
+    border-radius: 22px;
     background:
       linear-gradient(
         135deg,
@@ -776,24 +776,24 @@
     color: rgba(0,0,0,0.55);
   
     box-shadow:
-      0 0 0 6px rgba(25,193,195,0.15),
-      0 22px 70px rgba(0,0,0,0.55);
+    0 0 0 4px rgba(25,193,195,0.12),
+    0 18px 50px rgba(0,0,0,0.45);
   }
   
   /* Service card */
   .service-card{
     background: var(--panel-2);
-    border-radius: 26px;
-    padding: 26px;
+    padding: 20px 22px;
+    border-radius: 22px;
   
     border-top: 2px solid rgba(25,193,195,0.45);
     box-shadow: var(--shadow);
   }
   
   .service-card h3{
-    margin-top: 0;
+    margin-top: 6px;
     color: var(--teal);
-    font-size: 1.9rem;
+    font-size: 1.6rem;
   }
   
   .service-card p{
@@ -811,7 +811,7 @@
     }
   
     .image-placeholder{
-      height: 220px;
+      height: 180px;
     }
   }
   
