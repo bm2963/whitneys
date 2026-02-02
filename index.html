@@ -6,6 +6,7 @@
   <title>Haircuts at Whitney’s Studio</title>
   <meta name="description" content="A collective of independent stylists and colorists — including Whitney. Book your next haircut or color service at our studio." />
   <link rel="stylesheet" href="styles.css" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:wght@600;800&display=swap" rel="stylesheet">
@@ -29,7 +30,7 @@
     </div>
   </header>
 
-  <!-- Banner (NO PHOTO now) -->
+  <!-- Banner (no photo on homepage) -->
   <section class="banner banner--no-photo reveal" aria-label="Studio banner">
     <div class="container">
       <div class="banner-text">
@@ -131,7 +132,7 @@
       </div>
     </section>
 
-    <!-- Our Pricing (NEW) -->
+    <!-- Our Pricing (placeholder for now) -->
     <section class="section section-alt reveal" id="pricing">
       <div class="container">
         <div class="section-header">
@@ -140,7 +141,7 @@
         </div>
 
         <p class="hint" style="text-align:center; margin-top:12px;">
-          Pricing will be added soon. (This section is ready when you are.)
+          Pricing will be added soon.
         </p>
 
         <div class="pricing-grid reveal stagger" aria-label="Pricing placeholders">
@@ -169,7 +170,6 @@
           <h2>Come Find Us!</h2>
           <div class="teal-underline" aria-hidden="true"></div>
         </div>
-
         <p class="hint" style="text-align:center; margin-top:12px;">
           We’re conveniently located and easy to get to.
         </p>
@@ -196,9 +196,9 @@
             <p class="small-note">Parking: Add a quick note here if helpful.</p>
 
             <a class="btn btn-primary"
-               href="https://maps.google.com/?q=123%20Main%20Street%20Your%20City%20TX"
-               target="_blank"
-               rel="noopener">
+              href="https://maps.google.com/?q=123%20Main%20Street%20Your%20City%20TX"
+              target="_blank"
+              rel="noopener">
               Get Directions
             </a>
           </div>
@@ -263,7 +263,7 @@
       </div>
     </section>
 
-    <!-- Reviews (NEW) -->
+    <!-- Store Reviews (carousel with arrows; CSS-only) -->
     <section class="section reveal" id="reviews" aria-label="Store reviews">
       <div class="container">
         <div class="section-header">
@@ -276,42 +276,32 @@
         </p>
 
         <div class="reviews-carousel">
-          <!-- radios control the slide (CSS-only) -->
           <input class="reviews-radio" type="radio" name="review" id="rev-1" checked>
           <input class="reviews-radio" type="radio" name="review" id="rev-2">
           <input class="reviews-radio" type="radio" name="review" id="rev-3">
 
           <div class="reviews-viewport">
             <div class="reviews-track">
-
               <article class="review-card">
                 <p class="review-stars" aria-label="5 out of 5 stars">★★★★★</p>
-                <p class="review-text">
-                  “Best haircut I’ve had in years. Super clean studio and the staff is so friendly.”
-                </p>
+                <p class="review-text">“Best haircut I’ve had in years. Super clean studio and the staff is so friendly.”</p>
                 <p class="review-meta">— Jordan M.</p>
               </article>
 
               <article class="review-card">
                 <p class="review-stars" aria-label="5 out of 5 stars">★★★★★</p>
-                <p class="review-text">
-                  “Whitney absolutely nailed the color. I walked out feeling brand new.”
-                </p>
+                <p class="review-text">“Whitney absolutely nailed the color. I walked out feeling brand new.”</p>
                 <p class="review-meta">— Taylor R.</p>
               </article>
 
               <article class="review-card">
                 <p class="review-stars" aria-label="5 out of 5 stars">★★★★★</p>
-                <p class="review-text">
-                  “Fast, professional, and the cut looks great even weeks later. Highly recommend.”
-                </p>
+                <p class="review-text">“Fast, professional, and the cut looks great even weeks later. Highly recommend.”</p>
                 <p class="review-meta">— Casey L.</p>
               </article>
-
             </div>
           </div>
 
-          <!-- Controls change depending on which slide is checked -->
           <div class="reviews-controls" aria-label="Review controls">
             <div class="controls controls-1">
               <label class="review-arrow" for="rev-3" aria-label="Previous review">‹</label>
