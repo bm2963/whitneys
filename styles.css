@@ -889,61 +889,63 @@ h1, h2, h3{
   .pricing-grid{ grid-template-columns: 1fr; }
 }
 
-/* Reviews (CSS-only carousel) */
-.reviews-carousel{
-  margin-top: 18px;
-  position: relative;
-}
-
-.reviews-radio{
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
-}
-
+/* Reviews */
 .reviews-viewport{
   overflow: hidden;
   border-radius: var(--radius);
   border: 1px solid var(--border);
-  background: rgba(255,255,255,0.05);
-  box-shadow: var(--shadow);
+  background: transparent;
 }
 
 .reviews-track{
   display: flex;
-  width: 300%;
-  transition: transform 260ms ease;
+  width: 1000%; /* 10 slides */
+  transition: transform 300ms ease;
 }
 
+/* White review cards */
 .review-card{
   width: 100%;
-  padding: 22px 20px;
+  padding: 26px 24px;
+  background: #ffffff;
+  color: #111;
+  border-radius: var(--radius);
 }
 
+/* Gold stars */
 .review-stars{
-  margin: 0 0 10px;
+  margin: 0 0 12px;
   letter-spacing: 2px;
-  color: rgba(255,255,255,0.92);
+  color: #d4af37; /* gold */
+  font-size: 1.2rem;
   font-weight: 900;
 }
 
 .review-text{
   margin: 0 0 14px;
-  color: var(--ink);
   font-size: 1.05rem;
   line-height: 1.55;
+  color: #222;
 }
 
 .review-meta{
   margin: 0;
-  color: var(--muted);
   font-weight: 800;
+  color: #555;
 }
 
-/* Slide positions */
+/* Slide positions (10) */
 #rev-1:checked ~ .reviews-viewport .reviews-track{ transform: translateX(0%); }
-#rev-2:checked ~ .reviews-viewport .reviews-track{ transform: translateX(-33.333%); }
-#rev-3:checked ~ .reviews-viewport .reviews-track{ transform: translateX(-66.666%); }
+#rev-2:checked ~ .reviews-viewport .reviews-track{ transform: translateX(-10%); }
+#rev-3:checked ~ .reviews-viewport .reviews-track{ transform: translateX(-20%); }
+#rev-4:checked ~ .reviews-viewport .reviews-track{ transform: translateX(-30%); }
+#rev-5:checked ~ .reviews-viewport .reviews-track{ transform: translateX(-40%); }
+#rev-6:checked ~ .reviews-viewport .reviews-track{ transform: translateX(-50%); }
+#rev-7:checked ~ .reviews-viewport .reviews-track{ transform: translateX(-60%); }
+#rev-8:checked ~ .reviews-viewport .reviews-track{ transform: translateX(-70%); }
+#rev-9:checked ~ .reviews-viewport .reviews-track{ transform: translateX(-80%); }
+#rev-10:checked ~ .reviews-viewport .reviews-track{ transform: translateX(-90%); }
+
 
 /* Controls */
 .reviews-controls{ margin-top: 12px; }
