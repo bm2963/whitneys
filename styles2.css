@@ -173,8 +173,7 @@ h1, h2, h3{
     overflow: hidden;
     border: 1px solid rgba(255,255,255,0.12);
     box-shadow: var(--shadow);
-    background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.75)),
-    url("images/whitney-sign.jpg") center / cover no-repeat;
+    background: #0b0b0b;
   }
   
   .banner-frame img{
@@ -1087,29 +1086,3 @@ h1, h2, h3{
   letter-spacing: 0.9px;
 }
 
-
-/* =========================
-   Photo Hero (storefront)
-   ========================= */
-
-/* Use Whitney's storefront photo behind the hero text */
-.banner--photo{
-  padding: 54px 0 28px;
-  background:
-    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.72)),
-    url("whitney-sign.jpg") center/cover no-repeat;
-}
-
-.banner--photo .banner-text{
-  padding-top: 0;
-}
-
-/* Soften the dot texture on top of photos */
-.banner--photo::after{ opacity: 0.08; }
-
-/* Slightly tweak the hero glow so it looks natural over a photo */
-.banner--photo::before{
-  background:
-    radial-gradient(circle at 50% 28%, rgba(255,255,255,0.14), rgba(255,255,255,0) 58%),
-    radial-gradient(circle at 12% 10%, rgba(25,193,195,0.20), rgba(25,193,195,0) 50%);
-}
