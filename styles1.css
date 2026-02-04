@@ -31,31 +31,34 @@
 }
 
   
-  *{ box-sizing: border-box; }
-  html, body{ margin:0; padding:0; }
-  body{
-    body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
-    h1, h2, h3 { font-family: "Playfair Display", serif; letter-spacing: 0.2px; }
-    color: var(--ink);
-    line-height: 1.5;
-    margin: 0;
   
-    /* STRONG teal → black transition */
-    background: linear-gradient(
-      to bottom,
-      #19c1c3 0%,
-      #12aeb0 15%,
-      #0b7f82 30%,
-      #06484a 45%,
-      #031f20 60%,
-      #070707 80%,
-      #070707 100%
-    );
-  
-    background-attachment: fixed;
-  }
-  
-  
+*{ box-sizing: border-box; }
+html, body{ margin:0; padding:0; }
+
+body{
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--ink);
+  line-height: 1.5;
+
+  /* STRONG teal → black transition */
+  background: linear-gradient(
+    to bottom,
+    #19c1c3 0%,
+    #12aeb0 15%,
+    #0b7f82 30%,
+    #06484a 45%,
+    #031f20 60%,
+    #070707 80%,
+    #070707 100%
+  );
+  background-attachment: fixed;
+}
+
+h1, h2, h3{
+  font-family: "Playfair Display", serif;
+  letter-spacing: 0.2px;
+}
+
   a{ color: inherit; text-decoration: none; }
   
   .container{
@@ -847,50 +850,68 @@
       font-size: 1.25rem;
     }
   }
-/* =========================================================
-   REVIEWS CAROUSEL — FIXED (10 slides, centered, no blanks)
-   This block intentionally overrides any earlier reviews CSS.
-   ========================================================= */
+  
+/* =============================
+   Homepage additions
+   ============================= */
 
-.reviews-carousel{
-  margin-top: 18px;
-  position: relative;
+/* Banner (no-photo variant) */
+.banner--no-photo{
+  padding: 44px 0 18px;
+}
+.banner--no-photo .banner-text{
+  padding-top: 0;
 }
 
-.reviews-radio{
-  position: absolute;
-  opacity: 0;
-  pointer-events: none;
+/* Pricing */
+.pricing-grid{
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.pricing-card{
+  border-radius: var(--radius);
+  background: rgba(255,255,255,0.06);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  padding: 18px 18px;
+}
+.pricing-card h3{
+  margin: 0 0 8px;
+}
+.pricing-note{
+  margin: 0;
+  color: var(--muted);
 }
 
-/* Viewport */
+@media (max-width: 900px){
+  .pricing-grid{ grid-template-columns: 1fr; }
+}
+
+/* Reviews */
 .reviews-viewport{
   overflow: hidden;
   border-radius: var(--radius);
   border: 1px solid var(--border);
   background: transparent;
-  box-shadow: var(--shadow);
 }
 
-/* Track: no hard width — prevents "blank" slides */
 .reviews-track{
   display: flex;
-  width: auto !important;
-  max-width: 100%;
   transition: transform 300ms ease;
-  will-change: transform;
+  /* IMPORTANT: remove width: 1000% */
 }
 
-/* Each review card is exactly one viewport wide */
+/* White review cards (each slide = 100% of the viewport) */
 .review-card{
   flex: 0 0 100%;
-  min-width: 100%;
-  box-sizing: border-box;
   padding: 26px 24px;
   background: #ffffff;
   color: #111;
   border-radius: var(--radius);
 }
+
 
 /* Gold stars */
 .review-stars{
@@ -901,7 +922,6 @@
   font-weight: 900;
 }
 
-/* Text */
 .review-text{
   margin: 0 0 14px;
   font-size: 1.05rem;
@@ -915,7 +935,7 @@
   color: #555;
 }
 
-/* Slide positions (10) — move by full viewport widths */
+/* Slide positions (10) */
 #rev-1:checked  ~ .reviews-viewport .reviews-track{ transform: translateX(0%); }
 #rev-2:checked  ~ .reviews-viewport .reviews-track{ transform: translateX(-100%); }
 #rev-3:checked  ~ .reviews-viewport .reviews-track{ transform: translateX(-200%); }
@@ -927,11 +947,11 @@
 #rev-9:checked  ~ .reviews-viewport .reviews-track{ transform: translateX(-800%); }
 #rev-10:checked ~ .reviews-viewport .reviews-track{ transform: translateX(-900%); }
 
-/* Controls */
-.reviews-controls{
-  margin-top: 12px;
-}
 
+/* Controls */
+.reviews-controls{ margin-top: 12px; }
+
+/* Controls visibility (10 slides) */
 .controls{
   display: none;
   align-items: center;
@@ -939,17 +959,17 @@
   gap: 14px;
 }
 
-/* Show the correct control row for the selected review */
-#rev-1:checked  ~ .reviews-controls .controls-1{ display: flex; }
-#rev-2:checked  ~ .reviews-controls .controls-2{ display: flex; }
-#rev-3:checked  ~ .reviews-controls .controls-3{ display: flex; }
-#rev-4:checked  ~ .reviews-controls .controls-4{ display: flex; }
-#rev-5:checked  ~ .reviews-controls .controls-5{ display: flex; }
-#rev-6:checked  ~ .reviews-controls .controls-6{ display: flex; }
-#rev-7:checked  ~ .reviews-controls .controls-7{ display: flex; }
-#rev-8:checked  ~ .reviews-controls .controls-8{ display: flex; }
-#rev-9:checked  ~ .reviews-controls .controls-9{ display: flex; }
+#rev-1:checked ~ .reviews-controls .controls-1{ display: flex; }
+#rev-2:checked ~ .reviews-controls .controls-2{ display: flex; }
+#rev-3:checked ~ .reviews-controls .controls-3{ display: flex; }
+#rev-4:checked ~ .reviews-controls .controls-4{ display: flex; }
+#rev-5:checked ~ .reviews-controls .controls-5{ display: flex; }
+#rev-6:checked ~ .reviews-controls .controls-6{ display: flex; }
+#rev-7:checked ~ .reviews-controls .controls-7{ display: flex; }
+#rev-8:checked ~ .reviews-controls .controls-8{ display: flex; }
+#rev-9:checked ~ .reviews-controls .controls-9{ display: flex; }
 #rev-10:checked ~ .reviews-controls .controls-10{ display: flex; }
+
 
 .review-arrow{
   width: 44px;
@@ -959,6 +979,7 @@
   place-items: center;
   cursor: pointer;
   user-select: none;
+
   background: rgba(255,255,255,0.06);
   border: 1px solid var(--border);
   color: var(--white);
@@ -988,10 +1009,6 @@
   background: rgba(255,255,255,0.08);
 }
 
-/* Active dot highlight (all 10) */
-#rev-1:checked  ~ .reviews-controls .controls-1  .dot[for="rev-1"],
-#rev-2:checked  ~ .reviews-controls .controls-2  .dot[for="rev-2"],
-#rev-3:checked  ~ .reviews-controls .controls-3  .dot[for="rev-3"],
 #rev-4:checked  ~ .reviews-controls .controls-4  .dot[for="rev-4"],
 #rev-5:checked  ~ .reviews-controls .controls-5  .dot[for="rev-5"],
 #rev-6:checked  ~ .reviews-controls .controls-6  .dot[for="rev-6"],
@@ -1003,7 +1020,3 @@
   border-color: rgba(25,193,195,0.75);
 }
 
-/* Mobile padding tweak */
-@media (max-width: 520px){
-  .review-card{ padding: 20px 18px; }
-}
