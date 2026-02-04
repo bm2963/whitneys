@@ -31,34 +31,31 @@
 }
 
   
+  *{ box-sizing: border-box; }
+  html, body{ margin:0; padding:0; }
+  body{
+    body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+    h1, h2, h3 { font-family: "Playfair Display", serif; letter-spacing: 0.2px; }
+    color: var(--ink);
+    line-height: 1.5;
+    margin: 0;
   
-*{ box-sizing: border-box; }
-html, body{ margin:0; padding:0; }
-
-body{
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  color: var(--ink);
-  line-height: 1.5;
-
-  /* STRONG teal → black transition */
-  background: linear-gradient(
-    to bottom,
-    #19c1c3 0%,
-    #12aeb0 15%,
-    #0b7f82 30%,
-    #06484a 45%,
-    #031f20 60%,
-    #070707 80%,
-    #070707 100%
-  );
-  background-attachment: fixed;
-}
-
-h1, h2, h3{
-  font-family: "Playfair Display", serif;
-  letter-spacing: 0.2px;
-}
-
+    /* STRONG teal → black transition */
+    background: linear-gradient(
+      to bottom,
+      #19c1c3 0%,
+      #12aeb0 15%,
+      #0b7f82 30%,
+      #06484a 45%,
+      #031f20 60%,
+      #070707 80%,
+      #070707 100%
+    );
+  
+    background-attachment: fixed;
+  }
+  
+  
   a{ color: inherit; text-decoration: none; }
   
   .container{
@@ -163,85 +160,63 @@ h1, h2, h3{
     background: rgba(25,193,195,0.12);
   }
   
-  //* =========================
-   HERO / BANNER
-========================= */
-
-.banner{
-  padding: 0;
-}
-
-/* Photo hero */
-.banner--photo{
-  padding: 56px 0 42px;
-  border-radius: var(--radius);
-  overflow: hidden;
-  border: 1px solid rgba(255,255,255,0.12);
-  box-shadow: var(--shadow);
-
-  background:
-    linear-gradient(
-      rgba(0,0,0,0.55),
-      rgba(0,0,0,0.75)
-    ),
-    url("/images/whitney-sign.jpg") center / cover no-repeat;
-}
-
-.banner-text{
-  text-align: center;
-  text-shadow: 0 10px 40px rgba(0,0,0,0.55);
-}
-
-.banner-kicker{
-  margin: 0 0 6px;
-  color: rgba(255,255,255,0.75);
-  font-weight: 900;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  font-size: 0.82rem;
-}
-
-.banner-title{
-  margin: 0 0 8px;
-  font-weight: 1000;
-  font-size: clamp(2.0rem, 4vw, 3.1rem);
-  letter-spacing: 0.3px;
-  line-height: 1.05;
-}
-
-.banner-subtitle{
-  margin: 0 auto 18px;
-  max-width: 760px;
-  color: rgba(255,255,255,0.85);
-  font-size: 1.05rem;
-}
-
-.banner-actions{
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 14px;
-}
-
-/* Trust badges */
-.hero-badges{
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.hero-badges span{
-  padding: 8px 12px;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.22);
-  background: rgba(0,0,0,0.28);
-  color: rgba(255,255,255,0.95);
-  font-weight: 800;
-  font-size: 0.92rem;
-}
-
+  /* Banner */
+  .banner{
+    padding: 22px 0 10px;
+  }
+  
+  .banner-frame{
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.12);
+    box-shadow: var(--shadow);
+    background: #0b0b0b;
+  }
+  
+  .banner-frame img{
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+    /* IMPORTANT: unaltered image */
+    filter: none;
+  }
+  
+  .banner-text{
+    padding: 18px 4px 0;
+    text-align: center;
+  }
+  
+  .banner-kicker{
+    margin: 0 0 6px;
+    color: rgba(255,255,255,0.75);
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-size: 0.82rem;
+  }
+  
+  .banner-title{
+    margin: 0 0 8px;
+    font-weight: 1000;
+    font-size: clamp(2.0rem, 4vw, 3.1rem);
+    letter-spacing: 0.3px;
+    line-height: 1.05;
+  }
+  
+  .banner-subtitle{
+    margin: 0 auto 14px;
+    max-width: 760px;
+    color: var(--muted);
+    font-size: 1.05rem;
+  }
+  
+  .banner-actions{
+    display:flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
   
   /* Sections */
   .section{ padding: 56px 0; }
@@ -575,10 +550,20 @@ h1, h2, h3{
   }
   
   .feature-foot{
-    margin: 0;
+    margin-top: 16px;
+    display: inline-block;
+    padding: 10px 14px;
+    border-radius: 999px;
     font-size: 1.05rem;
-    color: rgba(255,255,255,0.85);
+    font-weight: 950;
+    color: #001114;
+    background: var(--teal);
+    box-shadow: 0 18px 45px rgba(25,193,195,0.18);
+    text-transform: uppercase;
+    letter-spacing: 0.9px;
+    text-decoration: underline; text-underline-offset: 6px;
   }
+  
   .contact-grid{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -872,54 +857,45 @@ h1, h2, h3{
       font-size: 1.25rem;
     }
   }
-  
-/* =============================
-   Homepage additions
-   ============================= */
+/* =========================================================
+   REVIEWS CAROUSEL — FIXED (10 slides, centered, no blanks)
+   This block intentionally overrides any earlier reviews CSS.
+   ========================================================= */
 
-/* Pricing */
-.pricing-grid{
-  margin-top: 22px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-}
-.pricing-card{
-  border-radius: var(--radius);
-  background: rgba(255,255,255,0.06);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow);
-  padding: 18px 18px;
-}
-.pricing-card h3{
-  margin: 0 0 8px;
-}
-.pricing-note{
-  margin: 0;
-  color: var(--muted);
+.reviews-carousel{
+  margin-top: 18px;
+  position: relative;
 }
 
-@media (max-width: 900px){
-  .pricing-grid{ grid-template-columns: 1fr; }
+.reviews-radio{
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
 }
 
-/* Reviews */
+/* Viewport */
 .reviews-viewport{
   overflow: hidden;
   border-radius: var(--radius);
   border: 1px solid var(--border);
   background: transparent;
+  box-shadow: var(--shadow);
 }
 
+/* Track: no hard width — prevents "blank" slides */
 .reviews-track{
   display: flex;
-  width: 1000%; /* 10 slides */
+  width: auto !important;
+  max-width: 100%;
   transition: transform 300ms ease;
+  will-change: transform;
 }
 
-/* White review cards */
+/* Each review card is exactly one viewport wide */
 .review-card{
-  width: 100%;
+  flex: 0 0 100%;
+  min-width: 100%;
+  box-sizing: border-box;
   padding: 26px 24px;
   background: #ffffff;
   color: #111;
@@ -935,6 +911,7 @@ h1, h2, h3{
   font-weight: 900;
 }
 
+/* Text */
 .review-text{
   margin: 0 0 14px;
   font-size: 1.05rem;
@@ -948,23 +925,23 @@ h1, h2, h3{
   color: #555;
 }
 
-/* Slide positions (10) */
-#rev-1:checked ~ .reviews-viewport .reviews-track{ transform: translateX(0%); }
-#rev-2:checked ~ .reviews-viewport .reviews-track{ transform: translateX(-10%); }
-#rev-3:checked ~ .reviews-viewport .reviews-track{ transform: translateX(-20%); }
-#rev-4:checked ~ .reviews-viewport .reviews-track{ transform: translateX(-30%); }
-#rev-5:checked ~ .reviews-viewport .reviews-track{ transform: translateX(-40%); }
-#rev-6:checked ~ .reviews-viewport .reviews-track{ transform: translateX(-50%); }
-#rev-7:checked ~ .reviews-viewport .reviews-track{ transform: translateX(-60%); }
-#rev-8:checked ~ .reviews-viewport .reviews-track{ transform: translateX(-70%); }
-#rev-9:checked ~ .reviews-viewport .reviews-track{ transform: translateX(-80%); }
-#rev-10:checked ~ .reviews-viewport .reviews-track{ transform: translateX(-90%); }
-
+/* Slide positions (10) — move by full viewport widths */
+#rev-1:checked  ~ .reviews-viewport .reviews-track{ transform: translateX(0%); }
+#rev-2:checked  ~ .reviews-viewport .reviews-track{ transform: translateX(-100%); }
+#rev-3:checked  ~ .reviews-viewport .reviews-track{ transform: translateX(-200%); }
+#rev-4:checked  ~ .reviews-viewport .reviews-track{ transform: translateX(-300%); }
+#rev-5:checked  ~ .reviews-viewport .reviews-track{ transform: translateX(-400%); }
+#rev-6:checked  ~ .reviews-viewport .reviews-track{ transform: translateX(-500%); }
+#rev-7:checked  ~ .reviews-viewport .reviews-track{ transform: translateX(-600%); }
+#rev-8:checked  ~ .reviews-viewport .reviews-track{ transform: translateX(-700%); }
+#rev-9:checked  ~ .reviews-viewport .reviews-track{ transform: translateX(-800%); }
+#rev-10:checked ~ .reviews-viewport .reviews-track{ transform: translateX(-900%); }
 
 /* Controls */
-.reviews-controls{ margin-top: 12px; }
+.reviews-controls{
+  margin-top: 12px;
+}
 
-/* Controls visibility (10 slides) */
 .controls{
   display: none;
   align-items: center;
@@ -972,17 +949,17 @@ h1, h2, h3{
   gap: 14px;
 }
 
-#rev-1:checked ~ .reviews-controls .controls-1{ display: flex; }
-#rev-2:checked ~ .reviews-controls .controls-2{ display: flex; }
-#rev-3:checked ~ .reviews-controls .controls-3{ display: flex; }
-#rev-4:checked ~ .reviews-controls .controls-4{ display: flex; }
-#rev-5:checked ~ .reviews-controls .controls-5{ display: flex; }
-#rev-6:checked ~ .reviews-controls .controls-6{ display: flex; }
-#rev-7:checked ~ .reviews-controls .controls-7{ display: flex; }
-#rev-8:checked ~ .reviews-controls .controls-8{ display: flex; }
-#rev-9:checked ~ .reviews-controls .controls-9{ display: flex; }
+/* Show the correct control row for the selected review */
+#rev-1:checked  ~ .reviews-controls .controls-1{ display: flex; }
+#rev-2:checked  ~ .reviews-controls .controls-2{ display: flex; }
+#rev-3:checked  ~ .reviews-controls .controls-3{ display: flex; }
+#rev-4:checked  ~ .reviews-controls .controls-4{ display: flex; }
+#rev-5:checked  ~ .reviews-controls .controls-5{ display: flex; }
+#rev-6:checked  ~ .reviews-controls .controls-6{ display: flex; }
+#rev-7:checked  ~ .reviews-controls .controls-7{ display: flex; }
+#rev-8:checked  ~ .reviews-controls .controls-8{ display: flex; }
+#rev-9:checked  ~ .reviews-controls .controls-9{ display: flex; }
 #rev-10:checked ~ .reviews-controls .controls-10{ display: flex; }
-
 
 .review-arrow{
   width: 44px;
@@ -992,7 +969,6 @@ h1, h2, h3{
   place-items: center;
   cursor: pointer;
   user-select: none;
-
   background: rgba(255,255,255,0.06);
   border: 1px solid var(--border);
   color: var(--white);
@@ -1022,107 +998,22 @@ h1, h2, h3{
   background: rgba(255,255,255,0.08);
 }
 
-#rev-1:checked ~ .reviews-controls .controls-1 .dot[for="rev-1"],
-#rev-2:checked ~ .reviews-controls .controls-2 .dot[for="rev-2"],
-#rev-3:checked ~ .reviews-controls .controls-3 .dot[for="rev-3"]{
+/* Active dot highlight (all 10) */
+#rev-1:checked  ~ .reviews-controls .controls-1  .dot[for="rev-1"],
+#rev-2:checked  ~ .reviews-controls .controls-2  .dot[for="rev-2"],
+#rev-3:checked  ~ .reviews-controls .controls-3  .dot[for="rev-3"],
+#rev-4:checked  ~ .reviews-controls .controls-4  .dot[for="rev-4"],
+#rev-5:checked  ~ .reviews-controls .controls-5  .dot[for="rev-5"],
+#rev-6:checked  ~ .reviews-controls .controls-6  .dot[for="rev-6"],
+#rev-7:checked  ~ .reviews-controls .controls-7  .dot[for="rev-7"],
+#rev-8:checked  ~ .reviews-controls .controls-8  .dot[for="rev-8"],
+#rev-9:checked  ~ .reviews-controls .controls-9  .dot[for="rev-9"],
+#rev-10:checked ~ .reviews-controls .controls-10 .dot[for="rev-10"]{
   background: var(--teal);
   border-color: rgba(25,193,195,0.75);
 }
 
-
-/* =========================
-   Hero Enhancements
-   ========================= */
-
-/* Add subtle depth/texture to the hero so it doesn't feel flat */
-.banner{
-  position: relative;
-  overflow: hidden;
-}
-
-.banner::before{
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(circle at 50% 28%, rgba(255,255,255,0.16), rgba(255,255,255,0) 55%),
-    radial-gradient(circle at 12% 10%, rgba(25,193,195,0.22), rgba(25,193,195,0) 45%);
-  pointer-events: none;
-}
-
-.banner::after{
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1px);
-  background-size: 26px 26px;
-  opacity: 0.12;
-  pointer-events: none;
-}
-
-/* Keep content above the decorative layers */
-.banner .container{
-  position: relative;
-  z-index: 1;
-}
-
-/* Quick info row under hero buttons */
-.hero-badges{
-  margin-top: 16px;
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.hero-badges span{
-  padding: 8px 12px;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.20);
-  background: rgba(0,0,0,0.18);
-  color: rgba(255,255,255,0.92);
-  font-weight: 800;
-  font-size: 0.95rem;
-}
-
-/* Make "Walk-ins welcome!" more obvious */
-.feature-foot{
-  margin-top: 16px;
-  display: inline-block;
-  padding: 10px 14px;
-  border-radius: 999px;
-  font-size: 1.05rem;
-  font-weight: 950;
-  color: #001114;
-  background: var(--teal);
-  box-shadow: 0 18px 45px rgba(25,193,195,0.18);
-  text-transform: uppercase;
-  letter-spacing: 0.9px;
-}
-
-
-/* =========================
-   Photo Hero (storefront)
-   ========================= */
-
-/* Use Whitney's storefront photo behind the hero text */
-.banner--photo{
-  padding: 54px 0 28px;
-  background:
-    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.72)),
-    url("/images/whitney-sign.jpg") center/cover no-repeat;
-}
-
-.banner--photo .banner-text{
-  padding-top: 0;
-}
-
-/* Soften the dot texture on top of photos */
-.banner--photo::after{ opacity: 0.08; }
-
-/* Slightly tweak the hero glow so it looks natural over a photo */
-.banner--photo::before{
-  background:
-    radial-gradient(circle at 50% 28%, rgba(255,255,255,0.14), rgba(255,255,255,0) 58%),
-    radial-gradient(circle at 12% 10%, rgba(25,193,195,0.20), rgba(25,193,195,0) 50%);
+/* Mobile padding tweak */
+@media (max-width: 520px){
+  .review-card{ padding: 20px 18px; }
 }
