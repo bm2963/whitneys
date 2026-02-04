@@ -899,18 +899,19 @@ h1, h2, h3{
 
 .reviews-track{
   display: flex;
-  width: 1000%; /* 10 slides */
   transition: transform 300ms ease;
+  /* IMPORTANT: remove width: 1000% */
 }
 
-/* White review cards */
+/* White review cards (each slide = 100% of the viewport) */
 .review-card{
-  width: 100%;
+  flex: 0 0 100%;
   padding: 26px 24px;
   background: #ffffff;
   color: #111;
   border-radius: var(--radius);
 }
+
 
 /* Gold stars */
 .review-stars{
@@ -935,16 +936,16 @@ h1, h2, h3{
 }
 
 /* Slide positions (10) */
-#rev-1:checked ~ .reviews-viewport .reviews-track{ transform: translateX(0%); }
-#rev-2:checked ~ .reviews-viewport .reviews-track{ transform: translateX(-10%); }
-#rev-3:checked ~ .reviews-viewport .reviews-track{ transform: translateX(-20%); }
-#rev-4:checked ~ .reviews-viewport .reviews-track{ transform: translateX(-30%); }
-#rev-5:checked ~ .reviews-viewport .reviews-track{ transform: translateX(-40%); }
-#rev-6:checked ~ .reviews-viewport .reviews-track{ transform: translateX(-50%); }
-#rev-7:checked ~ .reviews-viewport .reviews-track{ transform: translateX(-60%); }
-#rev-8:checked ~ .reviews-viewport .reviews-track{ transform: translateX(-70%); }
-#rev-9:checked ~ .reviews-viewport .reviews-track{ transform: translateX(-80%); }
-#rev-10:checked ~ .reviews-viewport .reviews-track{ transform: translateX(-90%); }
+#rev-1:checked  ~ .reviews-viewport .reviews-track{ transform: translateX(0%); }
+#rev-2:checked  ~ .reviews-viewport .reviews-track{ transform: translateX(-100%); }
+#rev-3:checked  ~ .reviews-viewport .reviews-track{ transform: translateX(-200%); }
+#rev-4:checked  ~ .reviews-viewport .reviews-track{ transform: translateX(-300%); }
+#rev-5:checked  ~ .reviews-viewport .reviews-track{ transform: translateX(-400%); }
+#rev-6:checked  ~ .reviews-viewport .reviews-track{ transform: translateX(-500%); }
+#rev-7:checked  ~ .reviews-viewport .reviews-track{ transform: translateX(-600%); }
+#rev-8:checked  ~ .reviews-viewport .reviews-track{ transform: translateX(-700%); }
+#rev-9:checked  ~ .reviews-viewport .reviews-track{ transform: translateX(-800%); }
+#rev-10:checked ~ .reviews-viewport .reviews-track{ transform: translateX(-900%); }
 
 
 /* Controls */
@@ -1008,9 +1009,14 @@ h1, h2, h3{
   background: rgba(255,255,255,0.08);
 }
 
-#rev-1:checked ~ .reviews-controls .controls-1 .dot[for="rev-1"],
-#rev-2:checked ~ .reviews-controls .controls-2 .dot[for="rev-2"],
-#rev-3:checked ~ .reviews-controls .controls-3 .dot[for="rev-3"]{
+#rev-4:checked  ~ .reviews-controls .controls-4  .dot[for="rev-4"],
+#rev-5:checked  ~ .reviews-controls .controls-5  .dot[for="rev-5"],
+#rev-6:checked  ~ .reviews-controls .controls-6  .dot[for="rev-6"],
+#rev-7:checked  ~ .reviews-controls .controls-7  .dot[for="rev-7"],
+#rev-8:checked  ~ .reviews-controls .controls-8  .dot[for="rev-8"],
+#rev-9:checked  ~ .reviews-controls .controls-9  .dot[for="rev-9"],
+#rev-10:checked ~ .reviews-controls .controls-10 .dot[for="rev-10"]{
   background: var(--teal);
   border-color: rgba(25,193,195,0.75);
 }
+
