@@ -165,30 +165,22 @@ h1, h2, h3{
   
   /* Banner */
   .banner{
-    padding: 22px 0 10px;
-  }
+    padding: 0;
+  }  
   
-  .banner-frame{
+  .banner--photo{
+    padding: 22px 0 10px; /* MOVED HERE */
     border-radius: var(--radius);
     overflow: hidden;
     border: 1px solid rgba(255,255,255,0.12);
     box-shadow: var(--shadow);
-    background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.75)),
-    url("images/whitney-sign.jpg") center / cover no-repeat;
-  }
-  
-  .banner-frame img{
-    width: 100%;
-    height: 260px;
-    object-fit: cover;
-    display: block;
-    /* IMPORTANT: unaltered image */
-    filter: none;
+    background:
+      linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.75)),
+      url("images/whitney-sign.jpg") center / cover no-repeat;
   }
   
   .banner-text{
-    padding: 18px 4px 0;
-    text-align: center;
+    text-shadow: 0 10px 40px rgba(0,0,0,0.55);
   }
   
   .banner-kicker{
