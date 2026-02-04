@@ -550,10 +550,20 @@
   }
   
   .feature-foot{
-    margin: 0;
+    margin-top: 16px;
+    display: inline-block;
+    padding: 10px 14px;
+    border-radius: 999px;
     font-size: 1.05rem;
-    color: rgba(255,255,255,0.85);
+    font-weight: 950;
+    color: #001114;
+    background: var(--teal);
+    box-shadow: 0 18px 45px rgba(25,193,195,0.18);
+    text-transform: uppercase;
+    letter-spacing: 0.9px;
+    text-decoration: underline; text-underline-offset: 6px;
   }
+  
   .contact-grid{
     display: grid;
     grid-template-columns: 1fr 1fr;
