@@ -950,6 +950,7 @@ h1, h2, h3{
 /* Controls */
 .reviews-controls{ margin-top: 12px; }
 
+/* Controls visibility (10 slides) */
 .controls{
   display: none;
   align-items: center;
@@ -960,6 +961,14 @@ h1, h2, h3{
 #rev-1:checked ~ .reviews-controls .controls-1{ display: flex; }
 #rev-2:checked ~ .reviews-controls .controls-2{ display: flex; }
 #rev-3:checked ~ .reviews-controls .controls-3{ display: flex; }
+#rev-4:checked ~ .reviews-controls .controls-4{ display: flex; }
+#rev-5:checked ~ .reviews-controls .controls-5{ display: flex; }
+#rev-6:checked ~ .reviews-controls .controls-6{ display: flex; }
+#rev-7:checked ~ .reviews-controls .controls-7{ display: flex; }
+#rev-8:checked ~ .reviews-controls .controls-8{ display: flex; }
+#rev-9:checked ~ .reviews-controls .controls-9{ display: flex; }
+#rev-10:checked ~ .reviews-controls .controls-10{ display: flex; }
+
 
 .review-arrow{
   width: 44px;
