@@ -847,7 +847,7 @@
 
   .service-image{
     width: 100%;
-    max-width: 440px;        /* 👈 controls how big the image feels */
+    max-width: 400px;        /* 👈 controls how big the image feels */
     margin: 0 auto;          /* centers image in its column */
   }
 
