@@ -206,7 +206,7 @@
   flex-direction: column;
   align-items: center;
 
-  gap: px;              /* controls ALL vertical spacing */
+  gap: 2px;              /* controls ALL vertical spacing */
   padding: 0;
 }
 
