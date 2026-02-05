@@ -843,18 +843,22 @@
   }
   
 
+  /* ===== Services: tuned image sizing ===== */
+
   .service-image{
     width: 100%;
-    max-width: 520px;
+    max-width: 440px;        /* 👈 controls how big the image feels */
+    margin: 0 auto;          /* centers image in its column */
   }
 
   .service-photo{
     width: 100%;
-    height: auto;      
+    height: auto;
     display: block;
 
-    border-radius: 22px; 
+    border-radius: 18px;     /* subtle polish — remove if you want sharp */
   }
+
 
   @media (max-width: 900px){
     .service-photo{ height: 240px; }
