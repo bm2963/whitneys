@@ -212,12 +212,13 @@
 
 /* WELCOME TO */
 .banner-kicker{
-  font-size: 0.95rem;
-  font-weight: 900;
-  letter-spacing: 0.20em;
+  font-size: 1.50rem;          /* 👈 much bigger */
+  font-weight: 700;
+  letter-spacing: 0.12em;      /* tighter so it doesn’t feel airy */
   text-transform: uppercase;
   color: rgba(120, 220, 215, 0.90);
-  line-height: 1.1;
+
+  line-height: 1.2;
   margin: 0;
 }
 
