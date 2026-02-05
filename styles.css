@@ -80,21 +80,21 @@
     gap: 16px;
   }
   
-  .brand{
-    display:flex;
-    align-items:center;
-    gap: 10px;
-    font-weight: 900;
-    letter-spacing: 0.2px;
+  .brand-logo {
+    display: flex;
+    align-items: center;
   }
-  .brand-mark{
-    width: 14px;
-    height: 14px;
-    border-radius: 999px;
-    background: var(--teal);
-    box-shadow: 0 0 0 6px rgba(25,193,195,0.18);
+  
+  .brand-logo img {
+    height: 28px;   /* small, replaces the text size */
+    width: auto;
+    display: block;
+  }  
+  @media (max-width: 600px) {
+    .brand-logo img {
+      height: 24px;
+    }
   }
-  .brand-text{ font-size: 1.05rem; }
   
   .nav{
     display:flex;
