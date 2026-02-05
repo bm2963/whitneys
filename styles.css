@@ -226,6 +226,19 @@
   align-items: center;
   overflow: hidden;
 }
+.banner-logo{
+  display: block;
+  margin: 10px auto 14px;  /* spacing above/below */
+  width: min(560px, 92%);  /* responsive sizing */
+  height: auto;
+}
+
+@media (max-width: 600px){
+  .banner-logo{
+    width: min(380px, 92%);
+  }
+}
+
 
 /* Photo layer */
 .banner-photo{
