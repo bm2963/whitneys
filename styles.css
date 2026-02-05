@@ -162,7 +162,13 @@
   
   /* Banner */
   .banner{
-    padding: 22px 0 10px;
+    position: relative;
+    min-height: 64vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  
+    padding: 16px 0; /* 👈 tighter, intentional */
   }
   
   .banner-frame{
@@ -188,12 +194,13 @@
   }
   
   .banner-kicker{
-    margin: 0 0 6px;
-    color: rgba(255,255,255,0.75);
-    font-weight: 900;
-    letter-spacing: 0.12em;
+    color: rgba(120, 220, 215, 0.85);
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
-    font-size: 0.82rem;
+  
+    margin-bottom: 2px;     /* 👈 tighter */
+    line-height: 1.1;       /* 👈 reduces vertical slack */
   }
   
   .banner-title{
@@ -220,18 +227,10 @@
   }
   
   /* ===== Homepage Photo Banner ===== */
-
-.banner{
-  position: relative;
-  min-height: 72vh;              
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-}
 .banner-logo{
   display: block;
-  margin: 6px auto 8px;     /* tighter vertical spacing */
-  width: min(700px, 95%);  /* larger on desktop */
+  margin: 2px auto 10px;  /* 👈 was larger before */
+  width: min(700px, 95%);
   height: auto;
 }
 
