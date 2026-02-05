@@ -866,7 +866,7 @@
   .service-photo{
     width: 100%;
     height: 100%;
-    object-fit: contain;      /* ✅ no cropping */
+    object-fit: cover;      /* ✅ no cropping */
     object-position: center;
     display: block;
   }
