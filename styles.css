@@ -170,7 +170,7 @@
     align-items: center;
     overflow: hidden;
   
-    min-height: unset;        /* ✅ remove the forced tall hero */
+    min-height: 45vh;        /* ✅ remove the forced tall hero */
     padding: 56px 0 52px;     /* ✅ controlled, tighter spacing */
   }
   
