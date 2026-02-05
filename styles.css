@@ -206,7 +206,7 @@
   flex-direction: column;
   align-items: center;
 
-  gap: 0px;              /* controls ALL vertical spacing */
+  gap: -3px;              /* controls ALL vertical spacing */
   padding: 0;
 }
 
@@ -224,7 +224,7 @@
 
 /* Logo */
 .banner-logo{
-  width: min(760px, 96%);
+  width: min(820px, 96%);
   height: auto;
   display: block;
   margin: 0;
