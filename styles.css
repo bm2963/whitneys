@@ -845,10 +845,10 @@
   /* Image area */
   .service-image{
     width: 100%;
-    max-width: 420px;
-    height: 200px;
+    max-width: 480px;        /* ⬅️ wider */
+    height: 280px;           /* ⬅️ taller */
     border-radius: 22px;
-    overflow: hidden; /* ✅ hard crop */
+    overflow: hidden;
     border: 1px solid rgba(255,255,255,0.12);
   
     box-shadow:
@@ -877,6 +877,13 @@
     height: 180px;
   }
 }
+@media (max-width: 900px){
+  .service-image{
+    max-width: 100%;
+    height: 240px;
+  }
+}
+
 
   
   
