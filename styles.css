@@ -212,30 +212,32 @@
   }
   
   .banner-actions{
-    display:flex;
+    display: flex;
     gap: 12px;
     justify-content: center;
     flex-wrap: wrap;
+    margin-top: 14px; 
   }
+  
   /* ===== Homepage Photo Banner ===== */
 
 .banner{
   position: relative;
-  min-height: 72vh;              /* 👈 KEY FIX */
+  min-height: 72vh;              
   display: flex;
   align-items: center;
   overflow: hidden;
 }
 .banner-logo{
   display: block;
-  margin: 10px auto 14px;  /* spacing above/below */
-  width: min(560px, 92%);  /* responsive sizing */
+  margin: 6px auto 8px;     /* tighter vertical spacing */
+  width: min(700px, 95%);  /* larger on desktop */
   height: auto;
 }
 
 @media (max-width: 600px){
   .banner-logo{
-    width: min(380px, 92%);
+    width: min(420px, 92%);
   }
 }
 
