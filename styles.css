@@ -1506,6 +1506,81 @@
     background: rgba(255,255,255,0.06);
     border: 1px solid rgba(255,255,255,0.10);
   }
+  /* =========================
+   Team Page Hero Header
+   ========================= */
+
+.team-hero{
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto 56px;
+  text-align: center;
+  padding: 28px 20px 40px;
+}
+
+.team-hero-title{
+  position: relative;
+  margin: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(2.4rem, 5vw, 3.2rem);
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  color: #ffffff;
+}
+
+/* Accent underline + glow */
+.team-hero-title::after{
+  content: "";
+  display: block;
+  width: 88px;
+  height: 4px;
+  margin: 18px auto 0;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    rgba(25,193,195,1),
+    rgba(25,193,195,0.35)
+  );
+  box-shadow: 0 0 18px rgba(25,193,195,0.55);
+}
+
+/* Subtitle styling */
+.team-hero-subtitle{
+  margin: 22px auto 0;
+  max-width: 720px;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  font-weight: 600;
+  color: rgba(255,255,255,0.82);
+}
+
+/* Subtle background glow */
+.team-hero::before{
+  content: "";
+  position: absolute;
+  inset: -40px -20px auto;
+  height: 180px;
+  background:
+    radial-gradient(
+      60% 100% at 50% 0%,
+      rgba(25,193,195,0.18),
+      transparent 70%
+    );
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Mobile tighten */
+@media (max-width: 700px){
+  .team-hero{
+    margin-bottom: 40px;
+  }
+
+  .team-hero-subtitle{
+    font-size: 0.95rem;
+  }
+}
+
   
   /* =========================
    Featured (Whitney)
