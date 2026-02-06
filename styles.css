@@ -2174,16 +2174,36 @@
       transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
     }
     
-    .about-social-links a svg{
-      width: 18px;
-      height: 18px;
-      fill: rgba(25,193,195,1);
+        /* Social logos (image-based) */
+    .about-social-links a{
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-weight: 700;
+      text-decoration: none;
+
+      color: rgba(255,255,255,0.85);
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.18);
+
+      transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
     }
-    
+
     .about-social-links a:hover{
       transform: translateY(-1px);
       border-color: rgba(25,193,195,0.6);
       background: rgba(25,193,195,0.12);
+    }
+
+    /* IMPORTANT: logo sizing */
+    .about-social-links img{
+      width: 18px;
+      height: 18px;
+      object-fit: contain;
+      display: block;
     }
     
     .about-social-links a:hover svg{
