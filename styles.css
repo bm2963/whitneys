@@ -1507,21 +1507,58 @@
     border: 1px solid rgba(255,255,255,0.10);
   }
   
-  /* Featured (Whitney) */
+  /* =========================
+   Featured (Whitney)
+   ========================= */
+
+.team-card--featured{
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  padding: 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+
+  background:
+    radial-gradient(900px 260px at 20% 0%, rgba(25,193,195,0.20), transparent 60%),
+    var(--panel-2);
+
+  border: 1px solid rgba(255,255,255,0.10);
+  border-top: 1px solid rgba(25,193,195,0.85);
+  box-shadow: var(--shadow);
+}
+
+.team-card--featured:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 30px 90px rgba(0,0,0,0.68),
+              0 0 0 1px rgba(25,193,195,0.18);
+}
+
+/* Photo fills left column naturally */
+.team-card--featured .team-photo{
+  border-right: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Right content spacing */
+.team-card--featured .team-info{
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Mobile */
+@media (max-width: 900px){
   .team-card--featured{
-    padding: 22px;
-    border-color: rgba(25,193,195,0.30);
-    border-top-color: rgba(25,193,195,0.85);
-    grid-template-columns: 140px 1fr;
-    background:
-      radial-gradient(900px 260px at 20% 0%, rgba(25,193,195,0.20), transparent 60%),
-      var(--panel-2);
+    grid-template-columns: 1fr;
   }
-  
-  .team-card--featured:hover{
-    transform: translateY(-3px);
-    box-shadow: 0 30px 90px rgba(0,0,0,0.68), 0 0 0 1px rgba(25,193,195,0.18);
+
+  .team-card--featured .team-photo{
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    height: 260px;
   }
+}
+
   
   .team-avatar--featured{
     width: 140px;
