@@ -1739,3 +1739,104 @@
     justify-content: flex-start;
   }
 }
+/* =========================
+   WHITNEY FEATURED CARD (Concept layout)
+   ========================= */
+
+   .team-grid--featured{
+    grid-template-columns: 1fr;
+  }
+  
+  .team-card--featured{
+    position: relative;
+    overflow: hidden;
+  
+    display: grid;
+    grid-template-columns: 360px 1fr; /* big photo | content */
+    min-height: 280px;
+  
+    border-radius: var(--radius);
+    background: var(--panel-2);
+    border: 1px solid rgba(255,255,255,0.10);
+    border-top: 1px solid rgba(25,193,195,0.65);
+    box-shadow: var(--shadow);
+  }
+  
+  /* big left image */
+  .team-photo--featured{
+    background: rgba(25,193,195,0.10);
+    border-right: 1px solid rgba(255,255,255,0.08);
+  }
+  
+  .team-photo--featured img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  /* right panel */
+  .team-info--featured{
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  /* Title presence */
+  .team-card--featured .team-name{
+    font-size: 1.25rem;
+  }
+  
+  .team-card--featured .team-role{
+    font-size: 1rem;
+  }
+  
+  /* Badge top-right */
+  .team-card--featured .team-badge{
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    padding: 10px 12px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 950;
+    color: #001114;
+    background: rgba(25,193,195,0.95);
+    border: 1px solid rgba(25,193,195,0.65);
+    z-index: 2;
+  }
+  
+  /* Button bottom-right like your concept */
+  .team-actions--featured{
+    margin-top: auto;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  /* “Pill” CTA */
+  .btn-pill{
+    border-radius: 999px;
+    padding-left: 26px;
+    padding-right: 26px;
+    min-width: 240px;
+  }
+  
+  /* Mobile: stack */
+  @media (max-width: 900px){
+    .team-card--featured{
+      grid-template-columns: 1fr;
+      min-height: auto;
+    }
+  
+    .team-photo--featured{
+      height: 260px;
+      border-right: none;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+  
+    .team-actions--featured{
+      justify-content: flex-start;
+    }
+  }
+  
