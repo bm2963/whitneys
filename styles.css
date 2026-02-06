@@ -1547,21 +1547,27 @@
     color: rgba(25,193,195,1);
   }
 
-  /* Accent underline */
   .team-hero-title::after{
     content: "";
     display: block;
-    width: 96px;
+    width: 140%;
+    max-width: 420px;
     height: 4px;
     margin: 22px auto 0;
     border-radius: 999px;
+  
     background: linear-gradient(
       90deg,
-      rgba(25,193,195,1),
-      rgba(25,193,195,0.35)
+      rgba(25,193,195,0) 0%,
+      rgba(25,193,195,0.45) 20%,
+      rgba(25,193,195,1) 50%,
+      rgba(25,193,195,0.45) 80%,
+      rgba(25,193,195,0) 100%
     );
-    box-shadow: 0 0 20px rgba(25,193,195,0.55);
+  
+    box-shadow: 0 0 18px rgba(25,193,195,0.55);
   }
+  
 
   /* Subtitle */
   .team-hero-subtitle{
