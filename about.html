@@ -1,81 +1,137 @@
-<main>
-  <section class="section" aria-label="About Whitney">
-    <div class="container">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      <!-- Hero Card -->
-      <div class="about-hero">
-        <h1 class="about-title">About Whitney</h1>
-        <p class="about-subtitle">Owner &amp; Operator of Haircuts at Whitney’s</p>
-      </div>
+  <title>About Whitney | Haircuts at Whitney’s</title>
+  <meta name="description" content="Learn about Whitney, owner and operator of Haircuts at Whitney’s in College Station." />
 
-      <!-- About Card -->
-      <article class="about-card">
-        <div class="about-grid">
+  <link rel="stylesheet" href="styles.css" />
+  <script>document.documentElement.classList.add('js');</script>
 
-          <!-- Photo -->
-          <div class="about-photo team-photo" aria-hidden="true">
-            <img src="images/placeholder-person.jpg" alt="Whitney, owner of Haircuts at Whitney’s" />
-          </div>
+  <!-- Match homepage fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:wght@600;800&display=swap" rel="stylesheet">
+</head>
 
-          <!-- Bio -->
-          <div class="about-content">
-            <h2 class="about-heading">Her Story</h2>
+<body class="page-about">
+  <!-- Header / Nav (matches team so hamburger works) -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Haircuts at Whitney’s Home">
+        <img class="brand-logo" src="images/whitney-logo.png" alt="Haircuts at Whitney’s" />
+      </a>
 
-            <p>
-              When I was about 10, my favorite thing to “play” was Whitney’s Hair Salon in my mom’s bathroom.
-              Styling hair always came naturally to me, and I’ve always been pretty good at it! I was constantly
-              braiding and styling all my friends’ and sisters’ hair on the weekends or trying out new styles on my own hair.
-            </p>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+        <span class="sr-only">Menu</span>
+      </button>
 
-            <p>
-              After two quick semesters in college, I realized a traditional education wasn’t for me. I decided to try
-              cosmetology school and I loved it! I graduated and started working at a busy salon in College Station,
-              learning skills and gaining business knowledge from an awesome business owner, great salon manager, and skilled co-workers.
-              I became a manager after two years and helped open a new location.
-            </p>
+      <nav class="nav" id="primary-nav" aria-label="Primary">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="team.html">Colorists &amp; Stylists</a>
+        <a class="nav-link is-active" href="about.html">About</a>
+        <a class="nav-cta" href="team.html">Book Now</a>
+      </nav>
+    </div>
+  </header>
 
-            <p>
-              After managing that salon for seven years, I felt ready to open one of my own. I always knew owning a business was in my future.
-            </p>
+  <main>
+    <section class="section" aria-label="About Whitney">
+      <div class="container">
 
-            <p>
-              After 10 years of hard work, that dream finally came true. I opened Haircuts at Whitney’s in 2014 with two goals.
-              First, I wanted a budget-friendly place where walk-in customers could get a great cut. Second, I wanted a place where talented
-              stylists could make a good income and have the freedom to set their own schedule.
-            </p>
+        <!-- Hero Card -->
+        <div class="about-hero">
+          <h1 class="about-title">About Whitney</h1>
+          <p class="about-subtitle">Owner &amp; Operator of Haircuts at Whitney’s</p>
+        </div>
 
-            <p>
-              My salon has been open for over 10 years now, and it couldn’t have happened without our customers! I am so grateful for each and
-              every customer and their support throughout the years. All of us at Haircuts at Whitney’s look forward to taking care of you for years to come.
-            </p>
+        <!-- About Card -->
+        <article class="about-card">
+          <div class="about-grid">
 
-            <!-- Contact / Schedule Card -->
-            <div class="about-callout">
-              <h3 class="about-callout-title">Schedule &amp; Contact</h3>
+            <!-- Photo -->
+            <div class="about-photo team-photo" aria-hidden="true">
+              <img src="images/placeholder-person.jpg" alt="Whitney, owner of Haircuts at Whitney’s" />
+            </div>
 
-              <p class="about-callout-text">
-                Call <strong>721-WHIT</strong> for weekly schedule or text:
+            <!-- Bio -->
+            <div class="about-content">
+              <h2 class="about-heading">Her Story</h2>
+
+              <p>
+                When I was about 10, my favorite thing to “play” was Whitney’s Hair Salon in my mom’s bathroom.
+                Styling hair always came naturally to me, and I’ve always been pretty good at it! I was constantly
+                braiding and styling all my friends’ and sisters’ hair on the weekends or trying out new styles on my own hair.
               </p>
 
-              <div class="about-callout-actions">
-                <a class="btn btn-primary" href="tel:+19795416581">(979) 541-6581</a>
-                <a class="btn btn-ghost" href="sms:+19795416581">Text Whitney</a>
-              </div>
-            </div>
+              <p>
+                After two quick semesters in college, I realized a traditional education wasn’t for me. I decided to try cosmetology school and I loved it!
+                I graduated and started working at a busy salon in College Station, learning skills and gaining business knowledge from an awesome business owner,
+                great salon manager, and skilled co-workers. I became a manager after two years and helped open a new location.
+              </p>
 
-            <!-- Social (placeholders for now) -->
-            <div class="about-social">
-              <p class="about-social-label">Follow Haircuts at Whitney’s</p>
-              <div class="about-social-links">
-                <a href="#" target="_blank" rel="noopener">Facebook</a>
-                <a href="#" target="_blank" rel="noopener">Instagram</a>
-              </div>
-            </div>
+              <p>
+                After managing that salon for seven years, I felt ready to open one of my own. I always knew owning a business was in my future.
+              </p>
 
+              <p>
+                After 10 years of hard work, that dream finally came true. I opened Haircuts at Whitney’s in 2014 with two goals. First, I wanted a
+                budget-friendly place where walk-in customers could get a great cut. Second, I wanted a place where talented stylists could make a good income
+                and have the freedom to set their own schedule.
+              </p>
+
+              <p>
+                My salon has been open for over 10 years now, and it couldn’t have happened without our customers! I am so grateful for each and every customer
+                and their support throughout the years. All of us at Haircuts at Whitney’s look forward to taking care of you for years to come.
+              </p>
+
+              <!-- Contact -->
+              <div class="about-callout">
+                <h3 class="about-callout-title">Schedule &amp; Contact</h3>
+                <p class="about-callout-text">Call <strong>721-WHIT</strong> for weekly schedule or text:</p>
+
+                <div class="about-callout-actions">
+                  <a class="btn btn-primary" href="tel:+19795416581">(979) 541-6581</a>
+                  <a class="btn btn-ghost" href="sms:+19795416581">Text Whitney</a>
+                </div>
+              </div>
+
+              <!-- Social (update links later) -->
+              <div class="about-social">
+                <p class="about-social-label">Follow Haircuts at Whitney’s</p>
+                <div class="about-social-links">
+                  <a href="#" target="_blank" rel="noopener">Facebook</a>
+                  <a href="#" target="_blank" rel="noopener">Instagram</a>
+                </div>
+              </div>
+
+            </div>
           </div>
-        </div>
-      </article>
+        </article>
 
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-branding">
+        <p class="footer-brand">Haircuts at Whitney’s</p>
+        <span class="footer-divider" aria-hidden="true"></span>
+        <p class="footer-muted">© 2026 · All Rights Reserved</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="team.html">Colorists &amp; Stylists</a>
+        <a href="about.html">About</a>
+        <a href="index.html#location">Location</a>
+      </div>
     </div>
-  </section>
-</main>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
