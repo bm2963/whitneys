@@ -1586,18 +1586,6 @@
     }
   }
 
-
-/* Mobile tighten */
-@media (max-width: 700px){
-  .team-hero{
-    margin-bottom: 40px;
-  }
-
-  .team-hero-subtitle{
-    font-size: 0.95rem;
-  }
-}
-
   
   /* =========================
    Featured (Whitney)
