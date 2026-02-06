@@ -16,14 +16,17 @@
   <!-- Header / Nav -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="brand-logo" aria-label="Haircuts at Whitney’s Home">
-        <img
-          src="images/whitney-logo.png"
-          alt="Haircuts at Whitney’s"
-        />
+      <a class="brand" href="index.html" aria-label="Haircuts at Whitney’s Home">
+        <img class="brand-logo" src="images/whitney-logo.png" alt="Haircuts at Whitney’s" />
       </a>
 
-      <nav class="nav" aria-label="Primary">
+      <!-- Hamburger button (mobile only via CSS) -->
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+        <span class="sr-only">Menu</span>
+      </button>
+
+      <nav class="nav" id="primary-nav" aria-label="Primary">
         <a class="nav-link is-active" href="index.html">Home</a>
         <a class="nav-link" href="team.html">Colorists &amp; Stylists</a>
         <a class="nav-link" href="about.html">About</a>
@@ -31,6 +34,7 @@
       </nav>
     </div>
   </header>
+
 
   <!-- Banner -->
       <section class="banner reveal" aria-label="Studio banner">
