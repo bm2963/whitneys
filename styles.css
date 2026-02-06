@@ -1311,10 +1311,14 @@
 }
 
 /* =========================
-   TEAM PAGE (Colorists & Stylists)
+   TEAM PAGE (Sectioned cards)
    ========================= */
 
-   .team-intro{
+   .page-team .section-header{
+    text-align: center;
+  }
+  
+  .team-intro{
     max-width: 860px;
     margin: 14px auto 0;
     text-align: center;
@@ -1323,46 +1327,45 @@
     line-height: 1.6;
   }
   
-  /* Filter chips (optional) */
-  .team-filters{
-    margin: 18px auto 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
+  /* Section headers */
+  .team-section{
+    margin-top: 26px;
   }
   
-  .chip{
-    padding: 10px 14px;
-    border-radius: 999px;
-    border: 1px solid rgba(255,255,255,0.12);
-    background: rgba(255,255,255,0.06);
-    color: rgba(255,255,255,0.88);
-    font-weight: 900;
-    cursor: pointer;
+  .team-section-head{
+    display: grid;
+    gap: 6px;
+    margin: 0 auto 12px;
+    max-width: 980px;
   }
   
-  .chip:hover{
-    border-color: rgba(25,193,195,0.45);
-    background: rgba(25,193,195,0.12);
+  .team-section-title{
+    margin: 0;
+    font-size: 1.15rem;
+    letter-spacing: 0.2px;
   }
   
-  .chip.is-active{
-    background: rgba(25,193,195,0.95);
-    border-color: rgba(25,193,195,0.75);
-    color: #001114;
+  .team-section-subtitle{
+    margin: 0;
+    color: rgba(255,255,255,0.72);
+    font-weight: 700;
   }
   
   /* Team grid */
   .team-grid{
-    margin-top: 24px;
+    margin-top: 12px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 14px;
   }
   
-  /* Team cards */
+  .team-grid--featured{
+    grid-template-columns: 1fr;
+  }
+  
+  /* Card base */
   .team-card{
+    position: relative;
     border-radius: var(--radius);
     background: var(--panel-2);
     border: 1px solid rgba(255,255,255,0.10);
@@ -1384,7 +1387,6 @@
     align-items: flex-start;
   }
   
-  /* Avatar with real image support */
   .team-avatar{
     width: 68px;
     height: 68px;
@@ -1407,13 +1409,49 @@
   }
   
   .team-role{
-    margin: 0 0 10px;
+    margin: 0;
     color: rgba(25,193,195,0.98);
     font-weight: 950;
     font-size: 0.95rem;
   }
   
+  /* Phone + actions */
+  .team-meta{
+    margin-top: 12px;
+  }
+  
+  .team-phone{
+    display: inline-flex;
+    font-weight: 900;
+    color: rgba(255,255,255,0.90);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255,255,255,0.18);
+  }
+  
+  .team-phone:hover{
+    border-bottom-color: rgba(25,193,195,0.7);
+  }
+  
+  .team-phone--muted{
+    color: rgba(255,255,255,0.60);
+    border-bottom-color: rgba(255,255,255,0.10);
+  }
+  
+  .team-actions{
+    margin-top: 14px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .team-actions .btn{
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Optional tags (you can remove from Whitney if you want) */
   .team-tags{
+    margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
@@ -1431,25 +1469,45 @@
     border: 1px solid rgba(255,255,255,0.10);
   }
   
-  .team-bio{
-    margin: 12px 0 0;
-    color: rgba(255,255,255,0.86);
-    line-height: 1.55;
+  /* Featured (Whitney) */
+  .team-card--featured{
+    padding: 22px;
+    border-color: rgba(25,193,195,0.30);
+    border-top-color: rgba(25,193,195,0.85);
+    background:
+      radial-gradient(900px 260px at 20% 0%, rgba(25,193,195,0.20), transparent 60%),
+      var(--panel-2);
   }
   
-  .team-actions{
-    margin-top: 14px;
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
+  .team-card--featured:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 30px 90px rgba(0,0,0,0.68), 0 0 0 1px rgba(25,193,195,0.18);
   }
   
-  .team-actions .btn{
-    width: 100%;
-    text-align: center;
+  .team-avatar--featured{
+    width: 84px;
+    height: 84px;
+    border-radius: 22px;
   }
   
-  /* Note at bottom */
+  .team-badge{
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    padding: 8px 10px;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 950;
+    color: #001114;
+    background: rgba(25,193,195,0.95);
+    border: 1px solid rgba(25,193,195,0.65);
+  }
+  
+  /* Placeholder styling */
+  .team-card--placeholder{
+    opacity: 0.88;
+  }
+  
   .team-note{
     margin: 20px auto 0;
     text-align: center;
@@ -1466,6 +1524,11 @@
   
     .team-actions .btn{
       width: auto;
+    }
+  
+    .team-badge{
+      top: 12px;
+      right: 12px;
     }
   }
   

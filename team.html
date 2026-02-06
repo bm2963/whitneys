@@ -21,7 +21,6 @@
         <img class="brand-logo" src="images/whitney-logo.png" alt="Haircuts at Whitney’s" />
       </a>
 
-      <!-- Hamburger button (mobile) -->
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
         <span class="nav-toggle-bars" aria-hidden="true"></span>
         <span class="sr-only">Menu</span>
@@ -38,7 +37,7 @@
 
   <main>
 
-    <!-- Page Hero -->
+    <!-- Page Intro -->
     <section class="section reveal" aria-label="Meet the team">
       <div class="container">
         <div class="section-header">
@@ -47,122 +46,213 @@
         </div>
 
         <p class="team-intro">
-          Haircuts at Whitney’s is a collective of independent professionals. Browse the team below and book directly with the stylist that fits your vibe.
+          Haircuts at Whitney’s is a collective of independent professionals. Choose your pro below and book directly with them.
         </p>
 
-        <!-- Optional filter chips (you can remove if you don’t want filtering yet) -->
-        <div class="team-filters" aria-label="Filter team by specialty">
-          <button class="chip is-active" type="button">All</button>
-          <button class="chip" type="button">Haircuts</button>
-          <button class="chip" type="button">Color</button>
-          <button class="chip" type="button">Highlights</button>
-          <button class="chip" type="button">Extensions</button>
-          <button class="chip" type="button">Styling</button>
-        </div>
+        <!-- =========================
+             Owner / Operator
+             ========================= -->
+        <section class="team-section" aria-label="Owner and Operator">
+          <div class="team-section-head">
+            <h3 class="team-section-title">Owner / Operator</h3>
+            <p class="team-section-subtitle">Whitney</p>
+          </div>
 
-        <!-- Team Grid (placeholders — we’ll replace with real names/photos/links next) -->
-        <div class="team-grid reveal stagger" aria-label="Team members">
+          <div class="team-grid team-grid--featured">
+            <!-- Whitney (featured card) -->
+            <article class="team-card team-card--featured">
+              <div class="team-badge">Owner / Operator</div>
 
-          <!-- Card 1 -->
-          <article class="team-card">
-            <div class="team-top">
-              <div class="team-avatar" aria-hidden="true">
-                <!-- Replace src with the stylist’s photo when ready -->
-                <img src="images/placeholder-person.jpg" alt="" />
-              </div>
+              <div class="team-top">
+                <div class="team-avatar team-avatar--featured" aria-hidden="true">
+                  <!-- Replace with real photo file -->
+                  <img src="images/placeholder-person.jpg" alt="" />
+                </div>
 
-              <div class="team-head">
-                <h3 class="team-name">Whitney</h3>
-                <p class="team-role">Stylist • Owner</p>
+                <div class="team-head">
+                  <h4 class="team-name">Whitney</h4>
+                  <p class="team-role">Owner • Stylist</p>
 
-                <div class="team-tags" aria-label="Specialties">
-                  <span class="tag">Haircuts</span>
-                  <span class="tag">Styling</span>
-                  <span class="tag">Consultations</span>
+                  <!-- Optional: keep or delete these tags -->
+                  <div class="team-tags" aria-label="Specialties">
+                    <span class="tag">Haircuts</span>
+                    <span class="tag">Styling</span>
+                    <span class="tag">Consultations</span>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <p class="team-bio">
-              Short placeholder bio. We’ll swap this with a real description (what she’s known for, what she loves doing, etc.).
-            </p>
-
-            <div class="team-actions">
-              <a class="btn btn-primary" href="#" target="_blank" rel="noopener">Book with Whitney</a>
-              <a class="btn btn-ghost" href="#" target="_blank" rel="noopener">Instagram</a>
-            </div>
-          </article>
-
-          <!-- Card 2 -->
-          <article class="team-card">
-            <div class="team-top">
-              <div class="team-avatar" aria-hidden="true">
-                <img src="images/placeholder-person.jpg" alt="" />
+              <div class="team-meta">
+                <a class="team-phone" href="tel:+1XXXXXXXXXX">(XXX) XXX-XXXX</a>
               </div>
 
-              <div class="team-head">
-                <h3 class="team-name">Stylist Name</h3>
-                <p class="team-role">Colorist • Extensions</p>
+              <div class="team-actions">
+                <a class="btn btn-primary" href="#" target="_blank" rel="noopener">Book Now</a>
+              </div>
+            </article>
+          </div>
+        </section>
 
-                <div class="team-tags" aria-label="Specialties">
-                  <span class="tag">Color</span>
-                  <span class="tag">Highlights</span>
-                  <span class="tag">Extensions</span>
+        <!-- =========================
+             Colorists
+             ========================= -->
+        <section class="team-section" aria-label="Colorists">
+          <div class="team-section-head">
+            <h3 class="team-section-title">Colorists</h3>
+            <p class="team-section-subtitle">Lydia, Halie, Mary, Erica</p>
+          </div>
+
+          <div class="team-grid">
+            <!-- Lydia -->
+            <article class="team-card">
+              <div class="team-top">
+                <div class="team-avatar" aria-hidden="true">
+                  <img src="images/placeholder-person.jpg" alt="" />
+                </div>
+                <div class="team-head">
+                  <h4 class="team-name">Lydia</h4>
+                  <p class="team-role">Colorist</p>
                 </div>
               </div>
-            </div>
 
-            <p class="team-bio">
-              Short placeholder bio. We’ll add real specialties, experience, and what clients can expect.
-            </p>
-
-            <div class="team-actions">
-              <a class="btn btn-primary" href="#" target="_blank" rel="noopener">Book Appointment</a>
-              <a class="btn btn-ghost" href="#" target="_blank" rel="noopener">Instagram</a>
-            </div>
-          </article>
-
-          <!-- Card 3 -->
-          <article class="team-card">
-            <div class="team-top">
-              <div class="team-avatar" aria-hidden="true">
-                <img src="images/placeholder-person.jpg" alt="" />
+              <div class="team-meta">
+                <a class="team-phone" href="tel:+1XXXXXXXXXX">(XXX) XXX-XXXX</a>
               </div>
 
-              <div class="team-head">
-                <h3 class="team-name">Stylist Name</h3>
-                <p class="team-role">Stylist</p>
+              <div class="team-actions">
+                <a class="btn btn-primary" href="#" target="_blank" rel="noopener">Book Now</a>
+              </div>
+            </article>
 
-                <div class="team-tags" aria-label="Specialties">
-                  <span class="tag">Haircuts</span>
-                  <span class="tag">Blowouts</span>
-                  <span class="tag">Events</span>
+            <!-- Halie -->
+            <article class="team-card">
+              <div class="team-top">
+                <div class="team-avatar" aria-hidden="true">
+                  <img src="images/placeholder-person.jpg" alt="" />
+                </div>
+                <div class="team-head">
+                  <h4 class="team-name">Halie</h4>
+                  <p class="team-role">Colorist</p>
                 </div>
               </div>
-            </div>
 
-            <p class="team-bio">
-              Short placeholder bio.
-            </p>
+              <div class="team-meta">
+                <a class="team-phone" href="tel:+1XXXXXXXXXX">(XXX) XXX-XXXX</a>
+              </div>
 
-            <div class="team-actions">
-              <a class="btn btn-primary" href="#" target="_blank" rel="noopener">Book Appointment</a>
-              <a class="btn btn-ghost" href="#" target="_blank" rel="noopener">Instagram</a>
-            </div>
-          </article>
+              <div class="team-actions">
+                <a class="btn btn-primary" href="#" target="_blank" rel="noopener">Book Now</a>
+              </div>
+            </article>
 
-        </div>
+            <!-- Mary -->
+            <article class="team-card">
+              <div class="team-top">
+                <div class="team-avatar" aria-hidden="true">
+                  <img src="images/placeholder-person.jpg" alt="" />
+                </div>
+                <div class="team-head">
+                  <h4 class="team-name">Mary</h4>
+                  <p class="team-role">Colorist</p>
+                </div>
+              </div>
 
-        <!-- Small note -->
+              <div class="team-meta">
+                <a class="team-phone" href="tel:+1XXXXXXXXXX">(XXX) XXX-XXXX</a>
+              </div>
+
+              <div class="team-actions">
+                <a class="btn btn-primary" href="#" target="_blank" rel="noopener">Book Now</a>
+              </div>
+            </article>
+
+            <!-- Erica -->
+            <article class="team-card">
+              <div class="team-top">
+                <div class="team-avatar" aria-hidden="true">
+                  <img src="images/placeholder-person.jpg" alt="" />
+                </div>
+                <div class="team-head">
+                  <h4 class="team-name">Erica</h4>
+                  <p class="team-role">Colorist</p>
+                </div>
+              </div>
+
+              <div class="team-meta">
+                <a class="team-phone" href="tel:+1XXXXXXXXXX">(XXX) XXX-XXXX</a>
+              </div>
+
+              <div class="team-actions">
+                <a class="btn btn-primary" href="#" target="_blank" rel="noopener">Book Now</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- =========================
+             Stylists
+             ========================= -->
+        <section class="team-section" aria-label="Stylists">
+          <div class="team-section-head">
+            <h3 class="team-section-title">Stylists</h3>
+            <p class="team-section-subtitle">Cassy + additional stylists coming soon</p>
+          </div>
+
+          <div class="team-grid">
+            <!-- Cassy -->
+            <article class="team-card">
+              <div class="team-top">
+                <div class="team-avatar" aria-hidden="true">
+                  <img src="images/placeholder-person.jpg" alt="" />
+                </div>
+                <div class="team-head">
+                  <h4 class="team-name">Cassy</h4>
+                  <p class="team-role">Stylist</p>
+                </div>
+              </div>
+
+              <div class="team-meta">
+                <a class="team-phone" href="tel:+1XXXXXXXXXX">(XXX) XXX-XXXX</a>
+              </div>
+
+              <div class="team-actions">
+                <a class="btn btn-primary" href="#" target="_blank" rel="noopener">Book Now</a>
+              </div>
+            </article>
+
+            <!-- Placeholder cards (duplicate for the remaining stylists once you have names) -->
+            <article class="team-card team-card--placeholder">
+              <div class="team-top">
+                <div class="team-avatar" aria-hidden="true">
+                  <img src="images/placeholder-person.jpg" alt="" />
+                </div>
+                <div class="team-head">
+                  <h4 class="team-name">Stylist Name</h4>
+                  <p class="team-role">Stylist</p>
+                </div>
+              </div>
+
+              <div class="team-meta">
+                <span class="team-phone team-phone--muted">Phone coming soon</span>
+              </div>
+
+              <div class="team-actions">
+                <a class="btn btn-ghost" href="#">Book Now</a>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
         <p class="team-note">
-          <strong>Note:</strong> Color &amp; extensions are typically by appointment. For exact pricing, check with your stylist.
+          <strong>Booking:</strong> Each professional manages their own schedule and services. Tap “Book Now” to view availability.
         </p>
+
       </div>
     </section>
 
   </main>
 
-  <!-- Footer (matches homepage) -->
   <footer class="footer">
     <div class="container footer-inner">
       <div>
