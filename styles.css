@@ -652,6 +652,63 @@
   }
   .footer-links a{ color: var(--muted); font-weight: 900; }
   .footer-links a:hover{ color: var(--white); }
+  /* =========================
+   FOOTER SOCIAL ICONS
+   ========================= */
+
+  .footer-right{
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+
+  /* Social container */
+  .footer-social{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  /* Icon buttons */
+  .footer-social a{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 34px;
+    height: 34px;
+    border-radius: 999px;
+
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.18);
+
+    transition: transform 160ms ease,
+                background 160ms ease,
+                border-color 160ms ease;
+  }
+
+  .footer-social a:hover{
+    transform: translateY(-1px);
+    background: rgba(25,193,195,0.12);
+    border-color: rgba(25,193,195,0.6);
+  }
+
+  /* Logo sizing */
+  .footer-social img{
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    display: block;
+  }
+
+  /* Mobile stacking */
+  @media (max-width: 700px){
+    .footer-right{
+      flex-direction: column;
+      gap: 12px;
+    }
+  }
+
   
   /* =========================
    Scroll reveal animation
