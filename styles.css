@@ -1388,9 +1388,9 @@
   }
   
   .team-avatar{
-    width: 68px;
-    height: 68px;
-    border-radius: 18px;
+    width: 92px;
+    height: 92px;
+    border-radius: 22px;
     overflow: hidden;
     flex: 0 0 auto;
     background: rgba(25,193,195,0.14);
@@ -1484,10 +1484,11 @@
     box-shadow: 0 30px 90px rgba(0,0,0,0.68), 0 0 0 1px rgba(25,193,195,0.18);
   }
   
+  /* Whitney (featured) */
   .team-avatar--featured{
-    width: 84px;
-    height: 84px;
-    border-radius: 22px;
+    width: 120px;
+    height: 120px;
+    border-radius: 26px;
   }
   
   .team-badge{
