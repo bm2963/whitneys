@@ -373,6 +373,15 @@
   margin: 0;
   margin-top: 8px;
 }
+.banner-actions .btn[href="#pricing"]{
+  border-color: rgba(25,193,195,0.45);
+  color: rgba(25,193,195,0.95);
+}
+
+.banner-actions .btn[href="#pricing"]:hover{
+  background: rgba(25,193,195,0.15);
+}
+
 
 /* Mobile adjustments */
 @media (max-width: 600px){
