@@ -1809,10 +1809,20 @@
   
   /* Button bottom-right like your concept */
   .team-actions--featured{
-    margin-top: auto;
+    margin-top: auto;              /* pushes button to bottom */
+    padding-top: 24px;             /* breathing room above */
     display: flex;
     justify-content: flex-end;
   }
+  /* Whitney description */
+  .team-card--featured .team-description{
+    margin-top: 10px;
+    max-width: 520px;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: rgba(255,255,255,0.78);
+  }
+
   
   /* “Pill” CTA */
   .btn-pill{
