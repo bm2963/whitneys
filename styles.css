@@ -1327,41 +1327,58 @@
     line-height: 1.6;
   }
   
-  /* Section headers */
+  /* =========================
+   TEAM SECTION HEADERS
+   (Match homepage styling)
+   ========================= */
+
   .team-section{
-    margin-top: 26px;
+    margin-top: 48px;
   }
-  
+
   .team-section-head{
-    display: grid;
-    gap: 6px;
-    margin: 0 auto 12px;
-    max-width: 980px;
+    margin-bottom: 20px;
   }
-  
+
   .team-section-title{
     margin: 0;
-    font-size: 1.15rem;
-    letter-spacing: 0.2px;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(1.8rem, 3vw, 2.2rem);
+    font-weight: 800;
+    letter-spacing: 0.4px;
+    color: #ffffff;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
   }
-  
+
+  /* Teal underline (homepage-style) */
+  .team-section-title::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 64px;
+    height: 3px;
+    background: linear-gradient(
+      90deg,
+      rgba(25,193,195,1),
+      rgba(25,193,195,0.35)
+    );
+    border-radius: 2px;
+  }
+
   .team-section-subtitle{
-    margin: 0;
-    color: rgba(255,255,255,0.72);
-    font-weight: 700;
+    margin-top: 10px;
+    max-width: 720px;
+    color: rgba(255,255,255,0.75);
+    font-weight: 650;
+    line-height: 1.6;
+  }
+  .team-section--featured .team-section-title{
+    color: rgba(25,193,195,1);
   }
   
-  /* Team grid */
-  .team-grid{
-    margin-top: 12px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 14px;
-  }
-  
-  .team-grid--featured{
-    grid-template-columns: 1fr;
-  }
   
   /* Card base */
   .team-card{
