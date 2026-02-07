@@ -2278,18 +2278,23 @@
       fill: rgba(25,193,195,1);
     }    
 
-/* Mobile */
-@media (max-width: 900px){
-  .about-grid{
-    grid-template-columns: 1fr;
-  }
-  .about-photo{
-    height: 260px;
-  }
-  .about-content{
-    padding: 24px;
-  }
-}
+    @media (max-width: 900px){
+      .about-photo{
+        height: auto; /* allow natural height */
+      }
+    
+      .about-photo img{
+        width: 100%;
+        height: auto;        /* key change */
+        object-fit: contain; /* key change */
+        display: block;
+        background: rgba(0,0,0,0.25); /* optional */
+      }
+    
+      .about-content{
+        padding: 24px;
+      }
+    }    
 
   /* Mobile: stack */
   @media (max-width: 900px){
