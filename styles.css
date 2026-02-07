@@ -2174,9 +2174,9 @@
     .about-photo img{
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: cover;   /* desktop = premium crop */
       display: block;
-    }
+    }    
 
     .about-content{
       padding: 32px;
@@ -2279,22 +2279,26 @@
     }    
 
     @media (max-width: 900px){
+      .about-grid{
+        grid-template-columns: 1fr;
+      }
+    
       .about-photo{
-        height: auto; /* allow natural height */
+        height: auto; /* stop forcing a fixed-height crop box */
       }
     
       .about-photo img{
         width: 100%;
-        height: auto;        /* key change */
-        object-fit: contain; /* key change */
+        height: auto;        /* key: allow natural height */
+        object-fit: contain; /* key: no crop */
         display: block;
-        background: rgba(0,0,0,0.25); /* optional */
+        background: rgba(0,0,0,0.25);
       }
     
       .about-content{
         padding: 24px;
       }
-    }    
+    }       
 
   /* Mobile: stack */
   @media (max-width: 900px){
