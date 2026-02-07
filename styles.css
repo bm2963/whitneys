@@ -1543,7 +1543,18 @@
     width: 100%;
     text-align: center;
   }
-  
+  /* Walk-in note (Whitney) */
+  .team-note--walkin{
+    margin-top: 16px;
+    padding-top: 12px;
+
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: rgba(255,255,255,0.78);
+
+    border-top: 1px solid rgba(255,255,255,0.12);
+  }
+
   /* Optional tags (you can remove from Whitney if you want) */
   .team-tags{
     margin-top: 10px;
