@@ -1652,6 +1652,31 @@
       transform: rotate(-2deg);
     }
   }
-  
+  /* =========================================
+   TEAM — Reduce perceived grain on low-res photos
+   ========================================= */
+
+/* Keep photo areas from getting too large (reduces upscaling/noise) */
+.page-team .team-card:not(.team-card--featured){
+  grid-template-columns: 150px 1fr; /* was ~170px */
+}
+
+.page-team .team-photo{
+  /* prevents huge photo containers on wide cards */
+  max-height: 190px;
+}
+
+/* Gentle smoothing (subtle, avoids “oil painting” look) */
+.page-team .team-photo img{
+  filter: blur(0.15px); /* tiny blur = less noisy */
+  transform: translateZ(0); /* helps some GPUs render cleaner */
+}
+
+/* Keep hover from reintroducing sharpness artifacts */
+.page-team .team-card:hover .team-photo img{
+  filter: blur(0.15px);
+  transform: translateZ(0);
+}
+
 
   
