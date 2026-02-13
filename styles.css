@@ -1589,24 +1589,8 @@
     display: none !important;
   }
 
-  /* =========================================
-    FIX: About image overly cropped on desktop
-    ========================================= */
-
-    .about-photo{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(0,0,0,0.25);
-    }
-    
-    .about-photo img{
-      width: 100%;
-      height: auto;          /* allow natural ratio */
-      object-fit: contain;   /* DO NOT crop */
-    }
 /* =========================================
-   ABOUT — Artsy corner layout (fixed properly)
+   ABOUT — Artsy floating corner layout
    ========================================= */
 
    .page-about .about-card--artsy{
@@ -1614,14 +1598,14 @@
     overflow: visible;
   }
   
-  /* Large floating photo */
-  .page-about .about-float-photo{
-    position: absolute;
-    top: -40px;
-    left: -40px;
+  /* Photo floats so text wraps around it */
+  .page-about .about-card--artsy .about-float-photo{
+    float: left;
   
-    width: 260px;            /* MUCH larger */
-    aspect-ratio: 1 / 1;
+    width: 260px;
+    height: 260px;
+  
+    margin: -40px 22px 14px -40px; /* hang outside card */
   
     border-radius: 28px;
     overflow: hidden;
@@ -1632,10 +1616,10 @@
       0 0 0 8px rgba(25,193,195,0.12);
   
     background: rgba(0,0,0,0.25);
-    z-index: 3;
+    transform: rotate(-2deg);
   }
   
-  .page-about .about-float-photo img{
+  .page-about .about-card--artsy .about-float-photo img{
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -1643,31 +1627,22 @@
     display: block;
   }
   
-  /* CRITICAL: push text away from the photo */
-  .page-about .about-card--artsy .about-content{
-    padding-top: 90px;      /* space below image */
-    padding-left: 200px;    /* push text right so it doesn't overlap */
+  /* Clear the float properly */
+  .page-about .about-card--artsy .about-content::after{
+    content: "";
+    display: block;
+    clear: both;
   }
   
-  /* Slight tilt for artsy feel (optional) */
-  .page-about .about-float-photo{
-    transform: rotate(-2deg);
-  }
-  
-  /* =========================
-     Mobile adjustments
-     ========================= */
+  /* Mobile */
   @media (max-width: 900px){
-  
-    .page-about .about-float-photo{
-      top: -25px;
-      left: -25px;
-      width: 180px;
-    }
-  
-    .page-about .about-card--artsy .about-content{
-      padding-left: 40px;
-      padding-top: 120px;
+    .page-about .about-card--artsy .about-float-photo{
+      float: none;
+      width: 190px;
+      height: 190px;
+      margin: -24px auto 14px;
+      display: block;
+      transform: rotate(-2deg);
     }
   }
   
