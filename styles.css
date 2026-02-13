@@ -1586,12 +1586,24 @@
       rgba(0,0,0,0.10),
       rgba(0,0,0,0.18)
     ) !important;
+    display: none !important;
   }
-/* =========================================
-   FIX: About photo cropped too much
-   (Place at the VERY bottom of styles.css)
-   ========================================= */
-   .about-photo img{
-    object-position: center top; /* try center 15% if needed */
-  }
+
+  /* =========================================
+    FIX: About image overly cropped on desktop
+    ========================================= */
+
+    .about-photo{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0,0,0,0.25);
+    }
+    
+    .about-photo img{
+      width: 100%;
+      height: auto;          /* allow natural ratio */
+      object-fit: contain;   /* DO NOT crop */
+    }
+  
   
