@@ -1583,15 +1583,11 @@
      filter: none !important;
    }
    
+  /* Remove vignette/tint overlay that can make photos look dirty */
   .page-team .team-photo::after,
   .page-team .team-photo--featured::after{
-      display: block !important;
-      background: linear-gradient(
-        180deg,
-        rgba(0,0,0,0.06),
-        rgba(0,0,0,0.12)
-      ) !important;
-}
+    display: none !important;
+  }
 
    
    /* Optional: make rendering a touch cleaner on some browsers */
