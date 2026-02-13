@@ -1691,6 +1691,21 @@
   .page-team .team-card:not(.team-card--featured){
     grid-template-columns: 140px 1fr;
   }
+/* =========================================
+   TEAM — reduce upscaling on desktop (no effects)
+   ========================================= */
+
+/* Make the photo column smaller on desktop */
+@media (min-width: 901px){
+  .page-team .team-card:not(.team-card--featured){
+    grid-template-columns: 140px 1fr; /* smaller photo column */
+  }
+
+  /* Keep photo area from getting too tall */
+  .page-team .team-card:not(.team-card--featured) .team-photo{
+    height: 170px;
+  }
+}
 
 
   
