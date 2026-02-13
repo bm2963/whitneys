@@ -1687,6 +1687,10 @@
      filter: none !important;
      transform: none !important;
    }
-   
+    /* Reduce upscaling: make photo column a bit smaller */
+  .page-team .team-card:not(.team-card--featured){
+    grid-template-columns: 140px 1fr;
+  }
+
 
   
