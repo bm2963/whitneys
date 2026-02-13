@@ -1564,36 +1564,41 @@
       transform: none !important;
       transition: none !important;
     }
-    
-  /* =========================================
+  }
+/* =========================================
    TEAM — Remove “grainy” look from photos
    (Paste at very bottom of styles.css)
    ========================================= */
 
-.page-team .team-photo img,
-.page-team .team-photo--featured img{
-  filter: none !important;
-  transform: none !important;
+   .page-team .team-photo img,
+   .page-team .team-photo--featured img{
+     filter: none !important;
+     transform: none !important;
+   }
+   
+   /* Stop hover zoom (can amplify noise) */
+   .page-team .team-card:hover .team-photo img,
+   .page-team .team-card--featured:hover .team-photo--featured img{
+     transform: none !important;
+     filter: none !important;
+   }
+   
+  .page-team .team-photo::after,
+  .page-team .team-photo--featured::after{
+      display: block !important;
+      background: linear-gradient(
+        180deg,
+        rgba(0,0,0,0.06),
+        rgba(0,0,0,0.12)
+      ) !important;
 }
 
-/* Stop hover zoom (can amplify noise) */
-.page-team .team-card:hover .team-photo img,
-.page-team .team-card--featured:hover .team-photo--featured img{
-  transform: none !important;
-  filter: none !important;
-}
-
-/* Remove vignette/tint overlay that can make photos look dirty */
-.page-team .team-photo::after,
-.page-team .team-photo--featured::after{
-  display: none !important;
-}
-
-/* Optional: make rendering a touch cleaner on some browsers */
-.page-team .team-photo img{
-  image-rendering: auto;
-}
-
+   
+   /* Optional: make rendering a touch cleaner on some browsers */
+   .page-team .team-photo img{
+     image-rendering: auto;
+   }
+   
 
 /* =========================================
    ABOUT — Artsy floating corner layout
