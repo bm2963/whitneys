@@ -1565,4 +1565,33 @@
       transition: none !important;
     }
   }
+  /* =========================================
+   FIX: Team photos look grainy (remove filter/overlay)
+   Scoped to Team page only
+   ========================================= */
+  .page-team .team-photo img{
+    filter: none !important;
+    transform: none !important;
+  }
+
+  .page-team .team-card:hover .team-photo img{
+    transform: none !important;
+    filter: none !important;
+  }
+
+  .page-team .team-photo::after{
+    /* keep it super subtle (or remove entirely) */
+    background: linear-gradient(
+      180deg,
+      rgba(0,0,0,0.10),
+      rgba(0,0,0,0.18)
+    ) !important;
+  }
+/* =========================================
+   FIX: About photo cropped too much
+   (Place at the VERY bottom of styles.css)
+   ========================================= */
+   .about-photo img{
+    object-position: center top; /* try center 15% if needed */
+  }
   
