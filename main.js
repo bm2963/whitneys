@@ -58,3 +58,49 @@ document.addEventListener("DOMContentLoaded", () => {
       a.addEventListener("click", closeMenu);
     });
   })();
+  // =======================
+  // Gallery Lightbox
+  // =======================
+  (() => {
+    const grid = document.getElementById("galleryGrid");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightboxImg");
+    const closeBtn = document.getElementById("lightboxClose");
+
+    if (!grid || !lightbox || !lightboxImg || !closeBtn) return;
+
+    const open = (src, alt = "") => {
+      lightboxImg.src = src;
+      lightboxImg.alt = alt || "Salon photo";
+      lightbox.classList.add("is-open");
+      lightbox.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    };
+
+    const close = () => {
+      lightbox.classList.remove("is-open");
+      lightbox.setAttribute("aria-hidden", "true");
+      lightboxImg.src = "";
+      document.body.style.overflow = "";
+    };
+
+    grid.addEventListener("click", (e) => {
+      const link = e.target.closest("a.gallery-item");
+      if (!link) return;
+
+      e.preventDefault();
+      const img = link.querySelector("img");
+      open(link.getAttribute("href"), img ? img.alt : "");
+    });
+
+    closeBtn.addEventListener("click", close);
+
+    lightbox.addEventListener("click", (e) => {
+      // clicking outside the image closes
+      if (e.target === lightbox) close();
+    });
+
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") close();
+    });
+  })();
