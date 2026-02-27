@@ -1864,14 +1864,3 @@
   border-color: rgba(25,193,195,0.6);
   background: rgba(25,193,195,0.12);
 }
-
-.btn-outline{
-  background: transparent;
-  border: 2px solid var(--teal);
-  color: var(--teal);
-}
-
-.btn-outline:hover{
-  background: var(--teal);
-  color: #000;
-} 
