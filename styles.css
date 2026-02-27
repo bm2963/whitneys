@@ -1612,7 +1612,7 @@
     width: 260px;
     height: 260px;
   
-    margin: -40px 28px 18px 0px; /* hang outside card */
+    margin: -40px 22px 14px 12px; /* hang outside card */
   
     border-radius: 28px;
     overflow: hidden;
