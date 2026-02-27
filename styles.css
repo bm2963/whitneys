@@ -1633,7 +1633,17 @@
     object-position: center;
     display: block;
   }
-  
+    /* Give the About card more room (desktop) */
+  @media (min-width: 901px){
+    .page-about .about-card{
+      max-width: 1120px;     /* wider card */
+    }
+  }
+
+  /* Make sure the artsy card does not clip the floating photo */
+  .page-about .about-card--artsy{
+    overflow: visible !important;
+  }
   /* Clear the float properly */
   .page-about .about-card--artsy .about-content::after{
     content: "";
