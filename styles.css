@@ -1716,6 +1716,21 @@
     height: 170px;
   }
 }
+/* =========================================
+   TEAM — Call + Text button layout
+   ========================================= */
+
+   .team-actions{
+    margin-top: auto;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .team-actions .btn{
+    min-width: 100px;
+    text-align: center;
+  }
 /* =========================
    GALLERY PAGE (clean + curated)
    ========================= */
