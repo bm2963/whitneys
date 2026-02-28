@@ -1003,6 +1003,17 @@
     font-weight: 600;
     color: rgba(255,255,255,0.82);
   }
+  .team-note--afterhours{
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    background: rgba(25,193,195,0.12);
+    border: 1px solid rgba(25,193,195,0.35);
+    color: rgba(25,193,195,0.95);
+  }
   
   @media (max-width: 700px){
     .page-team .team-hero{
