@@ -574,13 +574,16 @@
         <!-- Social Icons -->
         <div class="footer-social">
           <a href="https://www.instagram.com/haircutsatwhitneys_official/" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            aria-label="Instagram"
-            onclick="gtag('event', 'instagram_click', {
-              'event_category': 'social',
-              'event_label': 'footer_instagram'
-            });">
+              target="_blank" 
+              rel="noopener noreferrer" 
+              aria-label="Instagram"
+              onclick="if (typeof gtag === 'function') {
+                gtag('event', 'instagram_click', {
+                  'event_category': 'social',
+                  'event_label': 'footer_instagram',
+                  'transport_type': 'beacon'
+                });
+              }">
             <img src="images/logos/Instagram_Glyph_Gradient.png" alt="Instagram" />
           </a>
         </div>
